@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/ui.css"/>
+    <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../css/gogs.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <ul class="menu menu-line container" id="header-nav"><! -- external nav -->
+            <li class="right" id="header-nav-sign-in">
+                <a href="#" title="Sign In"><i class="octicon octicon-sign-in"></i>&nbsp;&nbsp;SignIn</a>
+            </li>
+            <li class="right">
+                <a href="#" title="Account Settings"><i class="octicon octicon-person-add"></i>&nbsp;&nbsp;Register</a>
+            </li>
+            <!-- base nav -->
+            <li class="head" id="header-nav-logo">
+                <img src="../img/favicon.png" alt="" class="avatar-30"/>
+            </li>
+            <li class="current"><a href="#">Dashboard</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </header>
+    <div id="sign-wrapper">
+        <form class="form-align form panel sign-panel sign-form container" action="#" id="sign-up-form">
+            <div class="panel-header">
+                <h2>Sign Up</h2>
+            </div>
+            <div class="panel-content">
+                <p class="field">
+                    <label for="user-name">UserName</label>
+                    <input id="user-name" class="ipt ipt-large" type="text"/>
+                </p>
+                <p class="field">
+                    <label for="email">Email</label>
+                    <input id="email" class="ipt ipt-large" type="email"/>
+                </p>
+                <p class="field">
+                    <label for="password">Password</label>
+                    <input id="password" class="ipt ipt-large" type="password"/>
+                </p>
+                <p class="field">
+                    <label for="re-type">Re-Type</label>
+                    <input id="re-type" class="ipt ipt-large" type="password"/>
+                </p>
+                <p class="field">
+                    <span class="form-label"></span>
+                    <button class="btn btn-blue btn-large">Create New Account</button>
+                </p>
+                <p class="field">
+                    <span class="form-label"></span>
+                    <a href="#">Already have an account? Sign in now!</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
+            Template: <strong>0ms</strong></p>
+
+        <p class="right" id="footer-links">
+            <a href="#"><i class="octicon octicon-mark-github"></i></a>
+            <a href="#">Official</a>
+            <span class="version">Go1.3</span>
+        </p>
+        <span class="clear"></span>
+    </div>
+</footer>
+</body>
+</html>

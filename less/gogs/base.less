@@ -3,7 +3,7 @@
 @headerBgColor: #428bca;
 @headerLinkFontColor: #FFF;
 @headerLinkHoverColor: #fff65f;
-@headerLinkCurrentColor: #222;
+@headerLinkCurrentColor: #fff65f;
 @headerSignOutColor: #ff908b;
 
 @footerBorderColor: #D6D6D6;
@@ -48,6 +48,7 @@ img.avatar-24{
   .container {
     padding-top: 1.8em;
     border-top: 1px solid @footerBorderColor;
+    height: 99px;
   }
   color: @footerFontColor;
 }
@@ -84,7 +85,6 @@ img.avatar-24{
     > li.current > a {
       color: @headerLinkCurrentColor;
       font-weight: bold;
-      text-shadow: 0 0 2px @headerLinkFontColor;
     }
   }
 }

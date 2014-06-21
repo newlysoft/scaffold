@@ -1,9 +1,14 @@
 @import "../ui/var";
 
+/*
+The dashboard page style
+*/
+
 @dashboardHeaderBorderColor: #D6D6D6;
 @dashboardSwitchMenuHoverBgColor: #2569b8;
 @dashboardSwitchMenuHoverFontColor: #FFF;
 
+// dashboard header, contains dashboard selection menu and nav of Feed/PR/Issues.
 #dashboard-header {
   border-bottom: 1px solid @dashboardHeaderBorderColor;
   height: 69px;
@@ -25,6 +30,7 @@
   }
 }
 
+// dashboard context switch selection
 #dashboard-selection-menu {
   a img {
     margin: -4px 10px 0 0;
@@ -35,6 +41,8 @@
   padding: 24px 0;
 }
 
+// dashboard sidebar contains contributed repositories panel,
+// and my repositories panel
 #dashboard-sidebar {
   .panel-header h4 {
     margin: 0;
@@ -85,29 +93,32 @@
   }
 }
 
+// the button of new repository in my repositories panel
 #dashboard-new-repo {
-  width: 64px;
+  width: 80px;
   height: 26px;
   padding-top: 6px;
 }
 
+// the drop-down menu of #dashboard-new-repo
 #dashboard-new-repo-menu {
-  top: 26px;
+  top: 24px;
   width: 180px;
   background-color: #FFF;
-  left: -118px;
+  left: -102px;
   .octicon {
     margin-right: 6px;
     font-size: 1.1em;
   }
 }
 
-#dashboard-selection-menu{
-  >.drop-down{
-    top:56px;
+#dashboard-selection-menu {
+  > .drop-down {
+    top: 56px;
   }
 }
 
+// the drop-down menu of #dashboard-selection-menu
 #dashboard-switch-menu {
   > li {
     border-bottom: 1px solid #EAEAEA;
