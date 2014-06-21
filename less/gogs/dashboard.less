@@ -1,0 +1,145 @@
+@import "../ui/var";
+
+@dashboardHeaderBorderColor: #D6D6D6;
+@dashboardSwitchMenuHoverBgColor: #2569b8;
+@dashboardSwitchMenuHoverFontColor: #FFF;
+
+#dashboard-header {
+  border-bottom: 1px solid @dashboardHeaderBorderColor;
+  height: 69px;
+  > .menu-line {
+    > li {
+      padding: 12px 0;
+    }
+    > li.right {
+      > a {
+        font-size: 1.2em;
+        &:hover {
+          background-color: transparent;
+        }
+        .octicon {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
+
+#dashboard-selection-menu {
+  a img {
+    margin: -4px 10px 0 0;
+  }
+}
+
+#dashboard {
+  padding: 24px 0;
+}
+
+#dashboard-sidebar {
+  .panel-header h4 {
+    margin: 0;
+  }
+  > .panel {
+    margin-bottom: 24px;
+  }
+}
+
+#dashboard-repositories,
+#dashboard-my-repo {
+  li {
+    border-bottom: 1px solid #EAEAEA;
+    &:last-child {
+      border-bottom: none;
+    }
+    a {
+      padding: 6px 1.2em;
+      display: block;
+      .octicon {
+        margin-right: 6px;
+        color: #888;
+      }
+      &:hover {
+        .repo-name {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .repo-name {
+    font-size: 1.1em;
+  }
+  .repo-star {
+    color: #888;
+  }
+}
+
+#dashboard-my-repo {
+  .panel-header {
+    .octicon {
+      margin-right: 6px;
+      font-size: 12px;
+    }
+  }
+  .repo-count {
+    margin-left: 4px;
+  }
+}
+
+#dashboard-new-repo {
+  width: 64px;
+  height: 26px;
+  padding-top: 6px;
+}
+
+#dashboard-new-repo-menu {
+  top: 26px;
+  width: 180px;
+  background-color: #FFF;
+  left: -118px;
+  .octicon {
+    margin-right: 6px;
+    font-size: 1.1em;
+  }
+}
+
+#dashboard-selection-menu{
+  >.drop-down{
+    top:56px;
+  }
+}
+
+#dashboard-switch-menu {
+  > li {
+    border-bottom: 1px solid #EAEAEA;
+    &:last-child {
+      border-bottom: none;
+    }
+    > a {
+      padding: .4em 1.2em;
+      display: block;
+      color: #444;
+      &:hover {
+        background-color: @dashboardSwitchMenuHoverBgColor;
+        color: @dashboardSwitchMenuHoverFontColor;
+      }
+      img {
+        margin-top: 0;
+      }
+      .octicon {
+        margin-right: 12px;
+      }
+    }
+  }
+  > li.org > a {
+    .octicon {
+      opacity: 0;
+    }
+  }
+  > li.checked > a {
+    .octicon {
+      opacity: 1;
+    }
+    font-weight: bold;
+  }
+  width: 100%;
+}

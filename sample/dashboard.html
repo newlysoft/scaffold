@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/ui.css"/>
+    <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../css/gogs.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <ul class="menu menu-line container" id="header-nav">
+            <li class="head" id="header-nav-logo">
+                <img src="../img/favicon.png" alt="" class="avatar-30"/>
+            </li>
+            <li class="current"><a href="#">Dashboard</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Help</a></li>
+            <li class="right" id="header-nav-sign-out">
+                <a href="#" title="Sign Out"><i class="octicon octicon-sign-out"></i></a>
+            </li>
+            <li class="right">
+                <a href="#" title="Account Settings"><i class="octicon octicon-settings"></i></a>
+            </li>
+            <li class="right">
+                <a href="#" title="Administration"><i class="octicon octicon-stop"></i></a>
+            </li>
+            <li class="right down">
+                <a href="#" title="New Repository or Organizations"><i class="octicon octicon-plus"></i></a>
+                <ul class="menu menu-down" id="header-new-repo-menu">
+                    <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
+                    <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                </ul>
+            </li>
+            <li class="right" id="header-nav-user">
+                <a href="#" class="text-bold">
+                    <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=30" alt="user-avatar"
+                         class="avatar-30"/>
+                    fuxiaohei
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div id="dashboard-wrapper">
+        <div id="dashboard-header">
+            <ul class="menu menu-line container">
+                <li id="dashboard-selection-menu" class="down drop">
+                    <a href="#" class="text-bold">
+                        <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=30" alt="user-avatar"
+                             class="avatar-30"/>
+                        fuxiaohei
+                    </a>
+                    <div class="drop-down panel">
+                        <p class="panel-header"><strong>Switch Dashboard Context</strong></p>
+                        <ul class="list-no-style menu menu-vertical" id="dashboard-switch-menu">
+                            <li class="org">
+                                <a href="#">
+                                    <i class="octicon octicon-check"></i>
+                                    <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=24" alt="user-avatar"
+                                         class="avatar-24"/>
+                                    fuxiaohei
+                                </a>
+                            </li>
+                            <li class="checked org">
+                                <a href="#">
+                                    <i class="octicon octicon-check"></i>
+                                    <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=24" alt="user-avatar"
+                                         class="avatar-24"/>
+                                    gogits
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="octicon octicon-organization"></i>Manage Organizations</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="octicon octicon-plus"></i>New Organizations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="right">
+                    <a href="#"><i class="octicon octicon-issue-opened"></i>Issues</a>
+                </li>
+                <li class="right">
+                    <a href="#"><i class="octicon octicon-git-pull-request"></i>Pull Requests</a>
+                </li>
+                <li class="right">
+                    <a href="#"><i class="octicon octicon-rss"></i>New Feed</a>
+                </li>
+            </ul>
+        </div>
+        <div id="dashboard" class="container clear">
+            <div id="dashboard-news" class="left grid-2-3">
+                news
+            </div>
+            <div id="dashboard-sidebar" class="right grid-1-3">
+                <div class="panel" id="dashboard-repositories">
+                    <div class="panel-header">
+                        <h4 class="text-bold">Repositories you contribute to</h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-no-style">
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo"></i>
+                                <span class="repo-name">
+                                    <span class="repo-name-prefix">gogits / </span>
+                                    <strong class="repo">gogs</strong>
+                                </span>
+                                <span class="right repo-star">
+                                    <i class="octicon octicon-star"></i>2048
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo"></i>
+                                <span class="repo-name">
+                                    <span class="repo-name-prefix">astaxie / </span>
+                                    <strong class="repo">beego</strong>
+                                </span>
+                                <span class="right repo-star">
+                                    <i class="octicon octicon-star"></i>2301
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo"></i>
+                                <span class="repo-name">
+                                    <span class="repo-name-prefix">gogits / </span>
+                                    <strong class="repo">scaffold</strong>
+                                </span>
+                                <span class="right repo-star">
+                                    <i class="octicon octicon-star"></i>0
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel" id="dashboard-my-repo">
+                    <div class="panel-header">
+                        <h4 class="left">Your Repositories
+                            <span class="repo-count label label-gray label-radius">3</span>
+                        </h4>
+                        <div class="right drop">
+                            <button class="btn btn-green btn-radius text-bold" id="dashboard-new-repo">
+                                <i class="octicon octicon-plus"></i>New
+                            </button>
+                            <ul class="menu menu-vertical drop-down" id="dashboard-new-repo-menu">
+                                <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
+                                <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                            </ul>
+                        </div>
+
+                        &nbsp;
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-no-style">
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo"></i>
+                                <span class="repo-name">
+                                    <span class="repo-name-prefix">gogits / </span>
+                                    <strong class="repo">gogs</strong>
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo"></i>
+                                <span class="repo-name">
+                                    <strong class="repo">beego</strong>
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo-forked"></i>
+                                <span class="repo-name">
+                                    <span class="repo-name-prefix">gogits / </span>
+                                    <strong class="repo">scaffold</strong>
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
+            Template: <strong>0ms</strong></p>
+
+        <p class="right" id="footer-links">
+            <a href="#"><i class="octicon octicon-mark-github"></i></a>
+            <a href="#">Official</a>
+            <span class="version">Go1.3</span>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

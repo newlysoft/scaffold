@@ -1,0 +1,117 @@
+@import "../ui/var";
+
+@headerBgColor: #428bca;
+@headerLinkFontColor: #FFF;
+@headerLinkHoverColor: #fff65f;
+@headerLinkCurrentColor: #222;
+@headerSignOutColor: #ff908b;
+
+@footerBorderColor: #D6D6D6;
+@footerFontColor: #888;
+
+html, body {
+  height: 100%;
+}
+
+.octicon{
+  width: 16px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 1.5em;
+  margin: auto;
+}
+
+img.avatar-30 {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+img.avatar-24{
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+#wrapper {
+  padding: 0;
+  margin: 0 0 -100px 0;
+  min-height: 100%;
+}
+
+#footer {
+  height: 100px;
+  overflow: hidden;
+  .container {
+    padding-top: 1.8em;
+    border-top: 1px solid @footerBorderColor;
+  }
+  color: @footerFontColor;
+}
+
+#footer-links {
+  > * {
+    border-left: 1px solid @footerBorderColor;
+    padding-left: 6px;
+    margin-left: 6px;
+    &:first-child {
+      border-left: none;
+    }
+  }
+}
+
+#header {
+  background-color: @headerBgColor;
+  > .menu-line {
+    > li > a {
+      display: inline-block;
+      &:hover {
+        background-color: transparent;
+        color: @headerLinkHoverColor;
+      }
+      color: @headerLinkFontColor;
+    }
+    > li.head {
+      color: @headerLinkFontColor;
+    }
+    > li.hover a:after {
+      bottom: -9px;
+      color: @headerLinkFontColor;
+    }
+    > li.current > a {
+      color: @headerLinkCurrentColor;
+      font-weight: bold;
+      text-shadow: 0 0 2px @headerLinkFontColor;
+    }
+  }
+}
+
+#header-nav-user {
+  height: 44px;
+  img {
+    margin: -4px 10px 0 0;
+  }
+}
+
+#header-nav-sign-out > a:hover {
+  color: @headerSignOutColor !important;
+}
+
+#header-nav-logo {
+  padding: 6px 1.2em;
+}
+
+#header-new-repo-menu{
+  width: 180px;
+  background-color: #FFF;
+  top:44px;
+  border-top: none;
+  .octicon{
+    margin-right: 6px;
+    font-size: 1.1em;
+  }
+  left:-66px;
+}

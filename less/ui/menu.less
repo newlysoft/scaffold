@@ -29,7 +29,8 @@ ul.menu {
 }
 
 ul.menu-line {
-  > li {
+  > li,
+  > li > a {
     display: inline-block;
   }
   > li.down {
@@ -91,4 +92,26 @@ ul.menu-down {
 ul.menu-down {
   position: absolute;
   display: none;
+  z-index: 99;
+  box-shadow: 0 0 2px @menuShadowColor;
+  background-color: @menuDownBgColor;
+}
+
+.drop {
+  position: relative;
+  &:hover {
+    > .drop-down {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      display: block;
+    }
+  }
+  > .drop-down {
+    display: none;
+    border: 1px solid @dropBorderColor;
+    box-shadow: 0 0 3px @menuShadowColor;
+    background-color: @dropDownBgColor;
+  }
 }
