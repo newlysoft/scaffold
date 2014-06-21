@@ -1,0 +1,94 @@
+@import "var";
+
+// lined menu
+
+ul.menu {
+  > li {
+    list-style: none;
+    > a {
+      padding: .8em 1.2em;
+      &:hover {
+        background-color: @lineMenuHoverBgColor;
+        color: @lineMenuHoverFontColor;
+      }
+    }
+    &.current > a,
+    &.hover > a {
+      color: @lineMenuHoverFontColor;
+    }
+  }
+  > li.head {
+    font-weight: bold;
+    padding: .8em 1.2em;
+  }
+  > li.down:hover {
+    > ul.menu-down {
+      display: block;
+    }
+  }
+}
+
+ul.menu-line {
+  > li {
+    display: inline-block;
+  }
+  > li.down {
+    position: relative;
+    > a:after {
+      content: "\25BE";
+      margin-left: .4em;
+    }
+    > ul.menu-down {
+      top: 2.1em;
+      width: 150%;
+    }
+  }
+  > li.hover {
+    position: relative;
+    > a:after {
+      position: absolute;
+      content: "\25B4";
+      left: 50%;
+      bottom: -1.1em;
+      margin-left: -4px;
+    }
+  }
+}
+
+ul.menu-vertical,
+ul.menu-down {
+  > li > a,
+  > li.head {
+    display: block;
+    padding: .4em 1.2em;
+  }
+  > li.down {
+    position: relative;
+    > a:after {
+      content: "\25B8";
+      position: absolute;
+      right: .6em;
+    }
+  }
+  > li.hover {
+    position: relative;
+    > a:after {
+      content: "\25B8";
+      position: absolute;
+      left: .5em;
+    }
+  }
+}
+
+ul.menu-border,
+ul.menu-down {
+  border: 1px solid @menuBorderColor;
+  > li.head {
+    border-bottom: 1px solid @menuBorderColor;
+  }
+}
+
+ul.menu-down {
+  position: absolute;
+  display: none;
+}
