@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../css/ui.css"/>
     <link rel="stylesheet" href="../font/octicons.css"/>
     <link rel="stylesheet" href="../css/gogs.css"/>
+    <script src="../js/lib/jquery-2.1.1.min.js"></script>
+    <script src="../js/lib/tabs.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -31,6 +33,7 @@
                 <ul class="menu menu-down" id="header-new-repo-menu">
                     <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
                     <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                    <li><a href="#"><i class="octicon octicon-repo-clone"></i>New Migration</a></li>
                 </ul>
             </li>
             <li class="right" id="header-nav-user">
@@ -92,11 +95,71 @@
         </div>
         <div id="dashboard" class="container clear">
             <div id="dashboard-news" class="left grid-2-3">
-                news
+                <div class="news issue-news issue-open-news clear">
+                    <div class="avatar left">
+                        <img src="../img/favicon.png" alt="" class="avatar-30">
+                    </div>
+                    <div class="content left">
+                        <p class="text-bold news-title issue-news-title"><a href="#">ultimaswc3</a> opened issue <a href="#">mitchellh/packer#1295</a></p>
+                        <p class="news-content issue-news-content">chef-client node/client cleanup never succeeds (node not found)</p>
+                        <p class="news-time text-italic">37 minutes ago</p>
+                    </div>
+                    <i class="mega-octicon octicon-issue-opened right"></i>
+                </div>
             </div>
             <div id="dashboard-sidebar" class="right grid-1-3">
-                <div class="panel" id="dashboard-repositories">
+                <ul id="dashboard-sidebar-menu" class="menu menu-line clear">
+                    <li class="js-tab-nav js-tab-nav-show" data-tab-target="#dashboard-my-repo"><a href="#">Repository</a></li>
+                    <li class="js-tab-nav" data-tab-target="#dashboard-my-org"><a href="#">Organization</a></li>
+                    <li class="js-tab-nav" data-tab-target="#dashboard-my-mirror"><a href="#">Mirror</a></li>
+                    <li class="drop right">
+                        <button class="btn btn-green text-bold" id="dashboard-new-repo">
+                            <i class="octicon octicon-plus"></i>
+                        </button>
+                        <ul class="menu menu-vertical drop-down" id="dashboard-new-repo-menu">
+                            <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
+                            <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="panel" id="dashboard-my-repo">
                     <div class="panel-header">
+                        <h4 class="left">Your Repositories
+                            <span class="repo-count label label-gray label-radius">3</span>
+                        </h4>
+                        &nbsp;
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-no-style">
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo"></i>
+                                <span class="repo-name">
+                                    <span class="repo-name-prefix">gogits / </span>
+                                    <strong class="repo">gogs</strong>
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo"></i>
+                                <span class="repo-name">
+                                    <strong class="repo">beego</strong>
+                                </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="octicon octicon-repo-forked"></i>
+                                <span class="repo-name">
+                                    <span class="repo-name-prefix">gogits / </span>
+                                    <strong class="repo">scaffold</strong>
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-header repo-contrib-header">
                         <h4 class="text-bold">Repositories you contribute to</h4>
                     </div>
                     <div class="panel-body">
@@ -140,52 +203,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="panel" id="dashboard-my-repo">
+                <div class="panel" id="dashboard-my-org">
                     <div class="panel-header">
-                        <h4 class="left">Your Repositories
-                            <span class="repo-count label label-gray label-radius">3</span>
-                        </h4>
-                        <div class="right drop">
-                            <button class="btn btn-green btn-radius text-bold" id="dashboard-new-repo">
-                                <i class="octicon octicon-plus"></i>New
-                            </button>
-                            <ul class="menu menu-vertical drop-down" id="dashboard-new-repo-menu">
-                                <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
-                                <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
-                            </ul>
-                        </div>
-
-                        &nbsp;
+                        <h4 class="text-bold">My Organizations</h4>
                     </div>
-                    <div class="panel-body">
-                        <ul class="list-no-style">
-                            <li>
-                                <a href="#">
-                                    <i class="octicon octicon-repo"></i>
-                                <span class="repo-name">
-                                    <span class="repo-name-prefix">gogits / </span>
-                                    <strong class="repo">gogs</strong>
-                                </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="octicon octicon-repo"></i>
-                                <span class="repo-name">
-                                    <strong class="repo">beego</strong>
-                                </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="octicon octicon-repo-forked"></i>
-                                <span class="repo-name">
-                                    <span class="repo-name-prefix">gogits / </span>
-                                    <strong class="repo">scaffold</strong>
-                                </span>
-                                </a>
-                            </li>
-                        </ul>
+                </div>
+                <div class="panel" id="dashboard-my-mirror">
+                    <div class="panel-header">
+                        <h4 class="text-bold">My Mirrors</h4>
                     </div>
                 </div>
             </div>
@@ -204,5 +229,10 @@
         </p>
     </div>
 </footer>
+<script>
+    $(function(){
+        Tabs('#dashboard-sidebar-menu');
+    });
+</script>
 </body>
 </html>

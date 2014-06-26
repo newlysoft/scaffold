@@ -52,7 +52,28 @@ The dashboard page style
   }
 }
 
-#dashboard-repositories,
+#dashboard-sidebar-menu {
+  > li {
+    border: 1px solid #d6d6d6;
+    float: left;
+    margin-right: -1px;
+    border-bottom: none;
+    > a {
+      padding-top: .4em;
+      padding-bottom: .4em;
+    }
+  }
+  > li.drop {
+    border: none;
+    float: right;
+  }
+  width: 100%;
+  height: 35px;
+  > li.js-tab-nav-show {
+    background-color: #EEEEEE;
+  }
+}
+
 #dashboard-my-repo {
   li {
     border-bottom: 1px solid #EAEAEA;
@@ -79,6 +100,9 @@ The dashboard page style
   .repo-star {
     color: #888;
   }
+  .repo-contrib-header {
+    border-top: 1px solid #d6d6d6;
+  }
 }
 
 #dashboard-my-repo {
@@ -93,19 +117,28 @@ The dashboard page style
   }
 }
 
+#dashboard-my-org,
+#dashboard-my-mirror {
+  display: none;
+}
+
 // the button of new repository in my repositories panel
 #dashboard-new-repo {
-  width: 80px;
-  height: 26px;
+  width: 50px;
+  height: 35px;
   padding-top: 6px;
+  margin-right: 1px;
+  .octicon {
+    font-size: 2em;
+  }
 }
 
 // the drop-down menu of #dashboard-new-repo
 #dashboard-new-repo-menu {
-  top: 24px;
+  top: 35px;
   width: 180px;
   background-color: #FFF;
-  left: -102px;
+  left: -132px;
   .octicon {
     margin-right: 6px;
     font-size: 1.1em;
@@ -153,4 +186,20 @@ The dashboard page style
     font-weight: bold;
   }
   width: 100%;
+}
+
+#dashboard-news {
+  .news {
+    margin-right: 2.4em;
+    .mega-octicon {
+      color: #CCC;
+    }
+    .avatar {
+      margin: 0 1.2em;
+    }
+    .news-content,
+    .news-time {
+      color: #888;
+    }
+  }
 }
