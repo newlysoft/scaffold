@@ -11,11 +11,12 @@
   float: right;
 }
 
-.clear:after {
+.clear::after{
   clear: both;
+  content: " ";
   width: 0;
   height: 0;
-  content: " ";
+  display: block;
 }
 
 // 12 based grids
