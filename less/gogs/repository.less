@@ -1,0 +1,41 @@
+@import "../ui/var";
+
+
+@repoHeaderBorderColor:#D6D6D6;
+@repoHeaderBgColor:#FFF;
+@repoHeaderNameColor:#888;
+
+
+#repository-header{
+  height: 69px;
+  border-bottom: 1px solid @repoHeaderBorderColor;
+  background-color: @repoHeaderBgColor;
+}
+#repository-header-name{
+  line-height: 66px;
+  color: @repoHeaderNameColor;
+  font-size: 1.6em;
+  font-weight: normal;
+  i{
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .divider{
+    margin: 0 4px;
+  }
+}
+
+#repository-header-meta{
+  line-height: 66px;
+  .btn{
+    font-size: 1.05em;
+    margin-left: 16px;
+    i{
+      margin-right: 6px;
+    }
+    line-height: 16px;
+    .num{
+      margin-left: 6px;
+    }
+  }
+}

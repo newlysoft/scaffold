@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Repository</title>
+    <link rel="stylesheet" href="../css/ui.css"/>
+    <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../css/gogs.css"/>
+    <script src="../js/lib/jquery-2.1.1.min.js"></script>
+    <script src="../js/lib/tabs.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+    <ul class="menu menu-line container" id="header-nav">
+        <li class="head" id="header-nav-logo">
+            <img src="../img/favicon.png" alt="" class="avatar-30"/>
+        </li>
+        <li class="current"><a href="#">Dashboard</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Help</a></li> <!-- user header nav -->
+        <li class="right" id="header-nav-sign-out">
+            <a href="#" title="Sign Out"><i class="octicon octicon-sign-out"></i></a>
+        </li>
+        <li class="right">
+            <a href="#" title="Account Settings"><i class="octicon octicon-settings"></i></a>
+        </li>
+        <li class="right">
+            <a href="#" title="Administration"><i class="octicon octicon-stop"></i></a>
+        </li>
+        <li class="right down">
+            <a href="#" title="New Repository or Organizations"><i class="octicon octicon-plus"></i></a>
+            <ul class="menu menu-down" id="header-new-repo-menu">
+                <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
+                <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                <li><a href="#"><i class="octicon octicon-repo-clone"></i>New Migration</a></li>
+            </ul>
+        </li>
+        <li class="right" id="header-nav-user">
+            <a href="#" class="text-bold">
+                <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=30" alt="user-avatar"
+                     class="avatar-30"/>
+                fuxiaohei
+            </a>
+        </li>
+    </ul>
+</header>
+<div id="repository-wrapper">
+    <div id="repository-header">
+        <div class="container clear">
+            <h1 id="repository-header-name" class="left public">
+                <i class="mega-octicon octicon-repo"></i>
+                <a class="author" href="#">gogits</a>
+                <span class="divider">/</span>
+                <a class="repo text-bold" href="#">gogs</a>
+            </h1>
+            <div id="repository-header-meta" class="right">
+                <span id="repository-header-watch">
+                    <a id="repository-header-watch-btn" href="#">
+                        <button class="btn btn-gray text-bold btn-radius">
+                            <i class="octicon octicon-eye-watch"></i>Watch
+                            <span class="num">645</span>
+                        </button>
+                    </a>
+                </span>
+                <span id="repository-header-star">
+                    <a id="repository-header-star-btn" href="#">
+                        <button class="btn btn-gray text-bold btn-radius">
+                            <i class="octicon octicon-star"></i>Star
+                            <span class="num">1827</span>
+                        </button>
+                    </a>
+                </span>
+                <span id="repository-header-fork">
+                    <a id="repository-header-fork-btn" href="#">
+                        <button class="btn btn-gray text-bold btn-radius">
+                            <i class="octicon octicon-repo-forked"></i>Fork
+                            <span class="num">47</span>
+                        </button>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
+            Template: <strong>0ms</strong></p>
+
+        <p class="right" id="footer-links">
+            <a href="#"><i class="octicon octicon-mark-github"></i></a>
+            <a href="#">Official</a>
+            <span class="version">Go1.3</span>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

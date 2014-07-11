@@ -103,6 +103,8 @@ a,
   &:hover {
     color: @linkHoverColor;
     text-decoration: none;
+  }
+  &:focus{
     outline: none;
   }
 }
@@ -233,9 +235,9 @@ input,
   padding: .6em;
   line-height: normal;
   border: 1px solid @iptBorderColor;
-  outline: none;
   &:focus {
     background-color: @iptFocusColor;
+    outline: none;
   }
 }
 
@@ -247,7 +249,9 @@ button {
 button,
 select {
   text-transform: none;
-  outline: none;
+  &:focus{
+    outline: none;
+  }
 }
 
 button,
@@ -255,6 +259,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
+  -moz-appearance:button;
   cursor: pointer;
   background-color: @btnBgColor;
   color: @btnFontColor;
@@ -284,6 +289,7 @@ input[type="radio"] {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-appearance:textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -304,9 +310,9 @@ textarea {
   overflow: auto;
   border: 1px solid @iptBorderColor;
   padding: .6em;
-  outline: none;
   &:focus {
     background-color: @iptFocusColor;
+    outline: none;
   }
 }
 
