@@ -46,7 +46,7 @@
     </ul>
 </header>
 <div id="repository-wrapper">
-    <div id="repository-header">
+    <div id="repository-header" class="clear">
         <div class="container clear">
             <h1 id="repository-header-name" class="left public">
                 <i class="mega-octicon octicon-repo"></i>
@@ -55,9 +55,16 @@
                 <a class="repo text-bold" href="#">gogs</a>
             </h1>
             <div id="repository-header-meta" class="right">
+                <span id="repository-header-download">
+                    <a id="repository-header-download-btn" href="#">
+                        <button class="btn btn-black text-bold">
+                            <i class="octicon octicon-cloud-download"></i>
+                        </button>
+                    </a>
+                </span>
                 <span id="repository-header-watch">
                     <a id="repository-header-watch-btn" href="#">
-                        <button class="btn btn-gray text-bold btn-radius">
+                        <button class="btn btn-gray text-bold">
                             <i class="octicon octicon-eye-watch"></i>Watch
                             <span class="num">645</span>
                         </button>
@@ -65,7 +72,7 @@
                 </span>
                 <span id="repository-header-star">
                     <a id="repository-header-star-btn" href="#">
-                        <button class="btn btn-gray text-bold btn-radius">
+                        <button class="btn btn-gray text-bold">
                             <i class="octicon octicon-star"></i>Star
                             <span class="num">1827</span>
                         </button>
@@ -73,13 +80,43 @@
                 </span>
                 <span id="repository-header-fork">
                     <a id="repository-header-fork-btn" href="#">
-                        <button class="btn btn-gray text-bold btn-radius">
+                        <button class="btn btn-gray text-bold">
                             <i class="octicon octicon-repo-forked"></i>Fork
                             <span class="num">47</span>
                         </button>
                     </a>
                 </span>
             </div>
+        </div>
+    </div>
+    <div id="repository-content" class="clear container">
+        <div id="repository-main" class="left grid-4-5">
+            <p id="repository-desc">
+                <span class="description">Gogs(Go Git Service) is a Self Hosted Git Service in the Go Programming Language.
+</span>
+                <a class="link" href="#">http://gogs.io</a>
+            </p>
+        </div>
+        <div id="repository-sidebar" class="right grid-1-5">
+            <ul class="menu menu-vertical" id="repository-sidebar-nav">
+                <li><a href="#"><i class="octicon octicon-issue-opened"></i>issues
+                    <span class="num right label label-blue">12</span>
+                </a></li>
+                <li><a href="#"><i class="octicon octicon-git-pull-request"></i>pull requests
+                    <span class="num right label label-blue">3</span>
+                </a></li>
+                <li class="border-bottom"></li>
+                <li class="head">master</li>
+                <li><a href="#"><i class="octicon octicon-history"></i>commits <span class="num right label label-gray">1234</span></a></li>
+                <li><a href="#"><i class="octicon octicon-git-branch"></i>branches <span
+                        class="num right label label-gray">2</span></a></li>
+                <li><a href="#"><i class="octicon octicon-tag"></i>releases <span
+                        class="num right label label-gray">6</span></a></li>
+                <li><a href="#"><i class="octicon octicon-organization"></i>contributors <span
+                        class="num right label label-gray">43</span></a></li>
+                <li class="border-bottom"></li>
+                <li><a href="#"><i class="octicon octicon-tools"></i>settings</a></li>
+            </ul>
         </div>
     </div>
 </div>
