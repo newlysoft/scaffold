@@ -45,60 +45,126 @@
         </li>
     </ul>
 </header>
-<div id="repository-wrapper">
-    <div id="repository-header" class="clear">
+<div id="repo-wrapper">
+    <div id="repo-header" class="clear">
         <div class="container clear">
-            <h1 id="repository-header-name" class="left public">
+            <h1 id="repo-header-name" class="left public">
                 <i class="mega-octicon octicon-repo"></i>
                 <a class="author" href="#">gogits</a>
                 <span class="divider">/</span>
                 <a class="repo text-bold" href="#">gogs</a>
             </h1>
-            <div id="repository-header-meta" class="right">
-                <span id="repository-header-download">
-                    <a id="repository-header-download-btn" href="#">
+            <ul id="repo-header-meta" class="right menu menu-line">
+                <li id="repo-header-download" class="inline-block down drop">
+                    <a id="repo-header-download-btn" href="#">
                         <button class="btn btn-black text-bold">
                             <i class="octicon octicon-cloud-download"></i>
                         </button>
                     </a>
-                </span>
-                <span id="repository-header-watch">
-                    <a id="repository-header-watch-btn" href="#">
+                    <div id="repo-header-download-drop" class="drop-down">
+                        <div id="repo-clone" class="clear">
+                            <button id="repo-clone-ssh" class="btn btn-blue current left">SSH</button>
+                            <button id="repo-clone-https" class="btn btn-gray left">HTTPS</button>
+                            <input id="repo-clone-url" type="text" class="ipt ipt-disabled left"/>
+                            <button id="repo-clone-copy" class="btn btn-black left">Copy</button>
+                            <p class="text-center" id="repo-clone-help">Need help cloning? Visit <a href="#">Help</a>!</p>
+                            <hr/>
+                            <div class="text-center" id="repo-clone-zip">
+                                <button class="btn btn-green"><i class="octicon octicon-file-zip"></i>ZIP</button>
+                                <button class="btn btn-green"><i class="octicon octicon-file-zip"></i>TAR.GZ</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="repo-header-watch">
+                    <a id="repo-header-watch-btn" href="#">
                         <button class="btn btn-gray text-bold">
                             <i class="octicon octicon-eye-watch"></i>Watch
                             <span class="num">645</span>
                         </button>
                     </a>
-                </span>
-                <span id="repository-header-star">
-                    <a id="repository-header-star-btn" href="#">
+                </li>
+                <li id="repo-header-star">
+                    <a id="repo-header-star-btn" href="#">
                         <button class="btn btn-gray text-bold">
                             <i class="octicon octicon-star"></i>Star
                             <span class="num">1827</span>
                         </button>
                     </a>
-                </span>
-                <span id="repository-header-fork">
-                    <a id="repository-header-fork-btn" href="#">
+                </li>
+                <li id="repo-header-fork">
+                    <a id="repo-header-fork-btn" href="#">
                         <button class="btn btn-gray text-bold">
                             <i class="octicon octicon-repo-forked"></i>Fork
                             <span class="num">47</span>
                         </button>
                     </a>
-                </span>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div id="repository-content" class="clear container">
-        <div id="repository-main" class="left grid-4-5">
-            <p id="repository-desc">
+    <div id="repo-content" class="clear container">
+        <div id="repo-main" class="left grid-4-5">
+            <p id="repo-desc">
                 <span class="description">Gogs(Go Git Service) is a Self Hosted Git Service in the Go Programming Language.
 </span>
                 <a class="link" href="#">http://gogs.io</a>
             </p>
+            <ul id="repo-file-nav" class="clear menu menu-line">
+                <li>
+                    <a href="#">
+                        <button class="btn btn-green btn-small" id="repo-compare-btn"><i class="octicon octicon-git-compare"></i></button>
+                    </a>
+                </li>
+                <li id="repo-branch-switch" class="down drop">
+                    <a href="#">
+                        <button class="btn btn-gray btn-small">
+                            <i class="octicon octicon-git-branch"></i> branch :
+                            <strong id="repo-branch-current">master</strong>
+                        </button>
+                    </a>
+                    <div class="drop-down panel">
+                        <p class="panel-header text-bold">Branches & Tags</p>
+                        <input id="repo-branch-filter-ipt" class="ipt ipt-large" type="text" placeholder="find branches / tags"/>
+                        <div id="repo-branch-tag">
+                            <ul class="menu menu-line tab-nav clear" id="repo-branch-tab-nav">
+                                <li class="js-tab-nav js-tab-nav-show left" data-tab-target="#repo-branch-list"><a href="#">Branches</a></li>
+                                <li class="js-tab-nav left" data-tab-target="#repo-tag-list"><a href="#">Tags</a></li>
+                            </ul>
+                            <ul class="menu menu-vertical switching-list" id="repo-branch-list">
+                                <li><a href="#"><i class="octicon octicon-check"></i>master</a></li>
+                                <li><a href="#"><i class="octicon octicon-check"></i>develop</a></li>
+                                <li class="checked"><a href="#"><i class="octicon octicon-check"></i>master-merge-dev</a></li>
+                                <li><a href="#"><i class="octicon octicon-check"></i>feature/custom-cache</a></li>
+                            </ul>
+                            <ul class="menu menu-vertical switching-list" id="repo-tag-list">
+                                <li><a href="#"><i class="octicon octicon-check"></i>0.3.3</a></li>
+                                <li><a href="#"><i class="octicon octicon-check"></i>0.4.4</a></li>
+                                <li class="checked"><a href="#"><i class="octicon octicon-check"></i>0.1</a></li>
+                                <li><a href="#"><i class="octicon octicon-check"></i>0.1 beta</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id="repo-bread" class="breads">
+                    <a class="title bread" href="#">gogs</a>
+                    <span class="bread">model</span>
+                    <span class="bread">user</span>
+                </li>
+                <li id="repo-commits-jump" class="repo-jump right">
+                    <a href="#">
+                        <button class="btn btn-small btn-gray"><i class="octicon octicon-git-commit"></i></button>
+                    </a>
+                </li>
+                <li id="repo-find-jump" class="repo-jump right">
+                    <a href="#">
+                        <button class="btn btn-small btn-gray"><i class="octicon octicon-list-unordered"></i></button>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div id="repository-sidebar" class="right grid-1-5">
-            <ul class="menu menu-vertical" id="repository-sidebar-nav">
+        <div id="repo-sidebar" class="right grid-1-5">
+            <ul class="menu menu-vertical" id="repo-sidebar-nav">
                 <li><a href="#"><i class="octicon octicon-issue-opened"></i>issues
                     <span class="num right label label-blue">12</span>
                 </a></li>
@@ -134,5 +200,10 @@
         </p>
     </div>
 </footer>
+<script>
+    $(function(){
+        Tabs('#repo-branch-tab-nav');
+    });
+</script>
 </body>
 </html>
