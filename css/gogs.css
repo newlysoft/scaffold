@@ -2,9 +2,13 @@ html,
 body {
   height: 100%;
 }
-.octicon {
+.octicon,
+.fa {
   width: 16px;
   text-align: center;
+}
+.fa {
+  font-size: 14px;
 }
 .container {
   max-width: 1170px;
@@ -28,7 +32,6 @@ img.avatar-24 {
 }
 #footer {
   height: 100px;
-  overflow: hidden;
   width: 100%;
   color: #888888;
 }
@@ -43,6 +46,21 @@ img.avatar-24 {
 }
 #footer-links > *:first-child {
   border-left: none;
+}
+#footer-lang {
+  position: relative;
+}
+#footer-lang .drop-down {
+  top: -64px;
+  left: -2px;
+  position: absolute;
+  height: 59px;
+  z-index: 100;
+  font-size: 12px;
+  width: 150%;
+}
+#footer-lang .drop-down li > a {
+  padding: 3px 9px;
 }
 #header {
   background-color: #428bca;
@@ -109,6 +127,43 @@ img.avatar-24 {
   background-color: #428bca !important;
   color: #fff !important;
 }
+.social-buttons .btn {
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-right: 12px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  padding: 5px 12px;
+  color: #FFF;
+}
+.social-buttons .btn .fa {
+  margin-right: 6px;
+  font-size: 16px;
+}
+.social-buttons .twitter {
+  background-color: #1c6399;
+}
+.social-buttons .twitter:hover {
+  background-color: #1c5487;
+}
+.social-buttons .github {
+  background-color: #444;
+}
+.social-buttons .github:hover {
+  background-color: #333;
+}
+.social-buttons .google {
+  background-color: #C03D20;
+}
+.social-buttons .google:hover {
+  background-color: #D56060;
+}
+.social-buttons .weibo {
+  background-color: #bf1324;
+}
+.social-buttons .weibo:hover {
+  background-color: #b94c4a;
+}
 #promo-wrapper {
   background-color: #428bca;
 }
@@ -141,7 +196,7 @@ img.avatar-24 {
   font-weight: normal;
 }
 #promo-form {
-  padding: 40px 0 80px 0;
+  padding: 40px 0;
 }
 #promo-form .ipt-large {
   border: none;
@@ -157,38 +212,43 @@ img.avatar-24 {
   font-size: 18px;
   margin-right: 12px;
 }
+#promo-social {
+  padding-bottom: 60px;
+}
 #feature-wrapper {
   font-family: Lato, sans-serif;
   font-size: 18px;
-  padding: 50px 0 120px 0;
-  margin-bottom: 30px;
+  padding: 50px 0 100px 0;
 }
 #feature-wrapper .octicon {
   color: #d9453d;
-  font-size: 52px;
-  height: 52px;
-  width: 52px;
-  line-height: 52px;
-  margin-right: 10px;
+  font-size: 60px;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  margin-right: 12px;
   vertical-align: middle;
   display: inline-block;
 }
 #feature-wrapper b {
   color: #000;
-  font-size: 20px;
+  font-size: 24px;
   display: inline-block;
   line-height: 60px;
 }
 #feature-wrapper p {
   margin: 1em 0;
-  line-height: 26px;
-  padding-right: 18px;
+  line-height: 40px;
+  padding-right: 30px;
 }
 #feature-wrapper a {
   color: #d9453d;
 }
 #feature-wrapper a:hover {
   color: #ff635a;
+}
+#feature-wrapper .grid-1-2 {
+  margin-bottom: 30px;
 }
 /*
 The dashboard page style

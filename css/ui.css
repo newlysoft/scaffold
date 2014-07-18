@@ -570,6 +570,14 @@ ul.menu-down {
   box-shadow: 0 0 3px #666666;
   background-color: #ffffff;
 }
+.drop-bottom:after {
+  content: "\25BE";
+  margin-left: .4em;
+}
+.drop-top:after {
+  content: "\25B4";
+  margin-left: .4em;
+}
 .panel {
   border: 1px solid #dddddd;
 }

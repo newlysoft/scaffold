@@ -5,12 +5,13 @@
     <title>Home</title>
     <link rel="stylesheet" href="../css/ui.css"/>
     <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../font/font-awesome.css"/>
     <link rel="stylesheet" href="../css/gogs.css"/>
 </head>
 <body>
 <div id="wrapper">
     <header id="header">
-        <ul class="menu menu-line container" id="header-nav"><! -- external nav -->
+        <ul class="menu menu-line container" id="header-nav"><!-- external nav -->
             <li class="right" id="header-nav-sign-in">
                 <a href="#" title="Sign In"><i class="octicon octicon-sign-in"></i>&nbsp;&nbsp;SignIn</a>
             </li>
@@ -41,27 +42,33 @@
                     <button class="btn btn-black btn-large">Login</button>
                     <button class="btn btn-green btn-large">Register</button>
                 </form>
+                <div id="promo-social" class="social-buttons">
+                    <button class="btn btn-gray github"><i class="fa fa-github"></i>Github</button>
+                    <button class="btn btn-gray twitter"><i class="fa fa-twitter"></i>Twitter</button>
+                    <button class="btn btn-gray google"><i class="fa fa-google"></i>Google</button>
+                    <button class="btn btn-gray weibo"><i class="fa fa-weibo"></i>Weibo</button>
+                </div>
             </div>&nbsp;
         </div>
     </div>
     <div id="feature-wrapper">
         <div class="container clear">
-            <div class="grid-1-4 left">
+            <div class="grid-1-2 left">
                 <i class="octicon octicon-flame"></i>
                 <b>Easy to install</b>
                 <p>Simply <a href="/docs/installation/install_from_binary.html">run the binary</a> for your platform. Or ship Gogs with <a href="https://github.com/gogits/gogs/tree/master/dockerfiles">Docker</a> or <a href="https://github.com/geerlingguy/ansible-vagrant-examples/tree/master/gogs">Vagrant</a>, or get it <a href="/docs/installation/install_from_packages.html">packaged</a>.</p>
             </div>
-            <div class="grid-1-4 left">
+            <div class="grid-1-2 left">
                 <i class="octicon octicon-device-desktop"></i>
                 <b>Cross-platform</b>
                 <p>Gogs runs anywhere <a href="http://golang.org/">Go</a> can compile for: Windows, Mac, Linux, ARM, etc.</p>
             </div>
-            <div class="grid-1-4 left">
+            <div class="grid-1-2 left">
                 <i class="octicon octicon-rocket"></i>
                 <b>Lightweight</b>
                 <p>Gogs has low minimal requirements and can run on an inexpensive Raspberry Pi.</p>
             </div>
-            <div class="grid-1-4 left">
+            <div class="grid-1-2 left">
                 <i class="octicon octicon-code"></i>
                 <b>Open Source</b>
                 <p>It's all on <a href="https://github.com/gogits/gogs/">GitHub</a>! Join us by contributing to make this project even better.</p>
@@ -70,17 +77,22 @@
     </div>
 </div>
 <footer id="footer">
-    <div class="container">
+    <div class="container clear">
         <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
             Template: <strong>0ms</strong></p>
-
-        <p class="right" id="footer-links">
+        <div class="right" id="footer-links">
             <a href="#"><i class="octicon octicon-mark-github"></i></a>
-            <a href="#">Language</a>
+            <div id="footer-lang" class="inline drop drop-top">Language
+                <div class="drop-down">
+                    <ul class="menu menu-vertical switching-list">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">简体中文</a></li>
+                    </ul>
+                </div>
+            </div>
             <a href="#">Official</a>
             <span class="version">Go1.3</span>
-        </p>
-        <span class="clear"></span>
+        </div>
     </div>
 </footer>
 </body>

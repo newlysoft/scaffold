@@ -9,13 +9,21 @@
 @footerBorderColor: #D6D6D6;
 @footerFontColor: #888;
 
+@langNum: 2px;
+// means 2 items
+
 html, body {
   height: 100%;
 }
 
-.octicon {
+.octicon,
+.fa {
   width: 16px;
   text-align: center;
+}
+
+.fa {
+  font-size: 14px;
 }
 
 .container {
@@ -44,7 +52,6 @@ img.avatar-24 {
 
 #footer {
   height: 100px;
-  overflow: hidden;
   width: 100%;
   .container {
     padding-top: 1.8em;
@@ -60,6 +67,22 @@ img.avatar-24 {
     margin-left: 5px;
     &:first-child {
       border-left: none;
+    }
+  }
+}
+
+#footer-lang {
+  position: relative;
+  .drop-down {
+    top: -2-31*@langNum;
+    left: -2px;
+    position: absolute;
+    height: -3+31*@langNum;
+    z-index: 100;
+    font-size: 12px;
+    width: 150%;
+    li > a {
+      padding: 3px 9px;
     }
   }
 }
@@ -136,4 +159,44 @@ img.avatar-24 {
     }
   }
 
+}
+
+.social-buttons {
+  .btn {
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding: 5px 12px;
+    color: #FFF;
+    .fa {
+      margin-right: 6px;
+      font-size: 16px;
+    }
+  }
+  .twitter {
+    background-color: #1c6399;
+    &:hover {
+      background-color: #1c5487;
+    }
+  }
+  .github {
+    background-color: #444;
+    &:hover {
+      background-color: #333;
+    }
+  }
+  .google {
+    background-color: #C03D20;
+    &:hover {
+      background-color: #D56060;
+    }
+  }
+  .weibo {
+    background-color: #bf1324;
+    &:hover {
+      background-color: #b94c4a;
+    }
+  }
 }
