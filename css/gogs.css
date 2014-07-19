@@ -174,7 +174,6 @@ img.avatar-24 {
 }
 .social-buttons .qq {
   background-color: #03a2ef;
-  box-shadow: 0 0 1px #1c6399;
 }
 .social-buttons .qq:hover {
   background-color: #3cb3ff;
@@ -230,6 +229,9 @@ img.avatar-24 {
 }
 #promo-social {
   padding-bottom: 60px;
+}
+#promo-social .qq {
+  box-shadow: 0 0 1px #1c6399;
 }
 #feature-wrapper {
   font-family: Lato, sans-serif;
@@ -418,8 +420,7 @@ The dashboard page style
 The register and sign-in page style
 */
 #sign-wrapper {
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding: 60px 0;
 }
 .sign-panel {
   background-color: #ffffff;
@@ -437,6 +438,9 @@ The register and sign-in page style
 .sign-form.form-align .alert {
   margin: 0 30px 24px 30px;
 }
+.sign-form.form-align:hover {
+  box-shadow: 0 0 6px #CCC;
+}
 .sign-form.container {
   padding: 0;
   width: 600px;
@@ -447,6 +451,18 @@ The register and sign-in page style
 }
 #sign-up-form h2 {
   margin: .5em 1em;
+}
+#sign-social {
+  position: relative;
+  margin: 40px 0;
+}
+#sign-social .or {
+  position: absolute;
+  width: 30px;
+  top: -52px;
+  left: 50%;
+  background-color: #FFF;
+  margin-left: -15px;
 }
 #repo-header {
   height: 69px;

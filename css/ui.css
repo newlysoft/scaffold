@@ -589,12 +589,12 @@ ul.menu-down {
   margin-left: .4em;
 }
 .panel {
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
 }
 .panel .panel-header {
   padding: .6em 1.2em;
   background-color: #eeeeee;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #cccccc;
 }
 .panel .panel-content {
   padding: .6em 1.2em;
@@ -602,10 +602,18 @@ ul.menu-down {
 .panel .panel-footer {
   padding: .6em 1.2em;
   background-color: #eeeeee;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #cccccc;
 }
 .panel.panel-radius {
   border-radius: .3em;
+}
+.panel.panel-radius .panel-header {
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+}
+.panel.panel-radius .panel-footer {
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
 }
 .label {
   padding: 2px 6px;

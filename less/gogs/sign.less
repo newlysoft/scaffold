@@ -7,8 +7,7 @@ The register and sign-in page style
 @signPanelBgColor: #FFF;
 
 #sign-wrapper {
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding: 60px 0;
 }
 
 .sign-panel {
@@ -29,6 +28,9 @@ The register and sign-in page style
   .alert{
     margin:0 30px 24px 30px;
   }
+  &:hover{
+    box-shadow: 0 0 6px #CCC;
+  }
 }
 
 .sign-form.container{
@@ -44,5 +46,18 @@ The register and sign-in page style
   }
   h2 {
     margin: .5em 1em;
+  }
+}
+
+#sign-social{
+  position: relative;
+  margin: 40px 0;
+  .or{
+    position: absolute;
+    width: 30px;
+    top: -52px;
+    left: 50%;
+    background-color: #FFF;
+    margin-left: -15px;
   }
 }
