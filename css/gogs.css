@@ -93,6 +93,7 @@ img.avatar-24 {
 }
 #header-nav-user img {
   margin: -4px 10px 0 0;
+  border-radius: 3px;
 }
 #header-nav-sign-out > a:hover {
   color: #ff908b !important;
@@ -176,6 +177,9 @@ img.avatar-24 {
 }
 .social-buttons .qq:hover {
   background-color: #3cb3ff;
+}
+.main-wrapper {
+  margin: 20px 0 40px 0;
 }
 #promo-wrapper {
   padding-top: 50px;
@@ -618,4 +622,40 @@ The register and sign-in page style
 #repo-main {
   padding-right: 40px;
   box-sizing: border-box;
+}
+#setting-menu {
+  box-sizing: border-box;
+}
+#setting-menu li > a {
+  background-color: #FFF;
+}
+#setting-menu li:hover {
+  border-color: #428bca;
+}
+#setting-menu li:hover a {
+  background-color: #428bca !important;
+  color: #fff !important;
+}
+#setting-menu li.current {
+  border-color: #888;
+}
+#setting-menu li.current a {
+  background-color: #888 !important;
+  color: #FFF !important;
+}
+.setting-content {
+  margin-left: 32px;
+}
+#user-profile-form {
+  margin: 30px 0;
+}
+#user-profile-form label,
+#user-profile-form .form-label {
+  width: 240px;
+}
+#user-profile-form .ipt {
+  width: 360px;
+}
+#user-profile-form .field {
+  margin-bottom: 24px;
 }

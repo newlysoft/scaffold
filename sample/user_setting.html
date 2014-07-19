@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Setting</title>
+    <link rel="stylesheet" href="../css/ui.css"/>
+    <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../css/gogs.css"/>
+    <script src="../js/lib/jquery-2.1.1.min.js"></script>
+    <script src="../js/settings.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+    <ul class="menu menu-line container" id="header-nav">
+        <li class="head" id="header-nav-logo">
+            <img src="../img/favicon.png" alt="" class="avatar-30"/>
+        </li>
+        <li class="current"><a href="#">Dashboard</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Help</a></li> <!-- user header nav -->
+        <li class="right" id="header-nav-sign-out">
+            <a href="#" title="Sign Out"><i class="octicon octicon-sign-out"></i></a>
+        </li>
+        <li class="right">
+            <a href="#" title="Account Settings"><i class="octicon octicon-settings"></i></a>
+        </li>
+        <li class="right">
+            <a href="#" title="Administration"><i class="octicon octicon-stop"></i></a>
+        </li>
+        <li class="right down">
+            <a href="#" title="New Repository or Organizations"><i class="octicon octicon-plus"></i></a>
+            <ul class="menu menu-down" id="header-new-repo-menu">
+                <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
+                <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                <li><a href="#"><i class="octicon octicon-repo-clone"></i>New Migration</a></li>
+            </ul>
+        </li>
+        <li class="right" id="header-nav-user">
+            <a href="#" class="text-bold">
+                <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=30" alt="user-avatar" class="avatar-30"/>
+                fuxiaohei
+            </a>
+        </li>
+    </ul>
+</header>
+<div id="setting-wrapper" class="main-wrapper">
+    <div id="user-profile-setting" class="container clear">
+        <div id="setting-menu" class="grid-1-5 panel panel-radius left">
+            <p class="panel-header"><strong>Settings</strong></p>
+            <div class="panel-body">
+                <ul class="menu menu-vertical switching-list grid-1-5 left">
+                    <li><a href="#">Profile</a></li>
+                    <li class="current"><a href="#">Password</a></li>
+                    <li><a href="#">SSH Keys</a></li>
+                    <li><a href="#">Socials</a></li>
+                    <li><a href="#">Kill Self</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="setting-content" class="grid-4-5 left">
+            <div id="user-profile-setting-content" class="setting-content panel panel-radius">
+                <p class="panel-header"><strong>My Profile</strong></p>
+                <form id="user-profile-form" class="form form-align" action="#">
+                    <p class="field">
+                        <label for="user-name">UserName</label>
+                        <input id="user-name" class="ipt ipt-large ipt-radius" type="text"/>
+                    </p>
+                    <p class="field">
+                        <label for="full-name">Full Name</label>
+                        <input id="full-name" class="ipt ipt-large ipt-radius" type="text"/>
+                    </p>
+                    <p class="field">
+                        <label for="email">Email</label>
+                        <input id="email" class="ipt ipt-large ipt-radius" text="email" type="text"/>
+                    </p>
+                    <p class="field">
+                        <label for="website">Website</label>
+                        <input id="website" class="ipt ipt-large ipt-radius" text="email" type="url"/>
+                    </p>
+                    <p class="field">
+                        <label for="location">Location</label>
+                        <input id="location" class="ipt ipt-large ipt-radius" type="text"/>
+                    </p>
+                    <p class="field">
+                        <label for="gravatar-email">Gravatar Email</label>
+                        <input id="gravatar-email" class="ipt ipt-large ipt-radius" type="text"/>
+                    </p>
+                    <p class="field">
+                        <span class="form-label"></span>
+                        <button class="btn btn-green btn-large btn-radius">Update Profile</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
+            Template: <strong>0ms</strong></p>
+
+        <p class="right" id="footer-links">
+            <a href="#"><i class="octicon octicon-mark-github"></i></a>
+            <a href="#">Official</a>
+            <span class="version">Go1.3</span>
+        </p>
+    </div>
+</footer>
+<script>
+    $(function(){
+        Tabs('#dashboard-sidebar-menu');
+    });
+</script>
+</body>
+</html>
