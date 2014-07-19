@@ -629,25 +629,23 @@ The register and sign-in page style
 #setting-menu li > a {
   background-color: #FFF;
 }
-#setting-menu li:hover {
-  border-color: #428bca;
-}
 #setting-menu li:hover a {
-  background-color: #428bca !important;
-  color: #fff !important;
-}
-#setting-menu li.current {
-  border-color: #888;
+  background-color: #FFF !important;
+  color: #428bca !important;
 }
 #setting-menu li.current a {
-  background-color: #888 !important;
-  color: #FFF !important;
+  font-weight: bold;
+  color: #d9453d;
+}
+#setting-menu li.current a:hover {
+  color: #d9453d !important;
 }
 .setting-content {
   margin-left: 32px;
 }
 #user-profile-form {
-  margin: 30px 0;
+  background-color: #FFF;
+  padding: 30px 0;
 }
 #user-profile-form label,
 #user-profile-form .form-label {
