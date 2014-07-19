@@ -1,0 +1,1 @@
+$(function(){!function($){var o=$("#footer-lang li").length;$("#footer-lang .drop-down").css({top:-31*o-2+"px",height:31*o-3+"px"})}(jQuery)});

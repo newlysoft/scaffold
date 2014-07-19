@@ -77,7 +77,7 @@
 }
 
 .btn-radius {
-  border-radius: .3em;
+  border-radius: .25em;
 }
 
 .btn-block {
@@ -101,8 +101,14 @@
 
 // input form elements
 
-.ipt {
+.ipt{
+  &:focus{
+    border-color: @iptFocusBorderColor;
+  }
+}
 
+.ipt-radius {
+  border-radius: .25em;
 }
 
 .ipt-small {
@@ -115,9 +121,9 @@
 
 .ipt-disabled,
 input[disabled] {
-  background-color: @iptDisabledColor;
+  background-color: @iptDisabledColor !important;
   &:focus {
-    background-color: @iptDisabledColor;
+    background-color: @iptDisabledColor !important;
   }
   color: #888;
   cursor: not-allowed;
@@ -126,8 +132,13 @@ input[disabled] {
 .ipt-readonly,
 input[readonly] {
   &:focus {
-    background-color: @iptDisabledColor;
+    background-color: @iptDisabledColor !important;
   }
+}
+
+.ipt-error{
+  border-color: @iptErrorBorderColor !important;
+  background-color: @iptErrorFocusColor !important;
 }
 
 .form {
