@@ -627,21 +627,21 @@ The register and sign-in page style
   box-sizing: border-box;
 }
 #setting-menu li > a {
+  border-left: 2px solid #FFF;
   background-color: #FFF;
 }
 #setting-menu li:hover {
-  border-color: #428bca;
+  border-color: #EAEAEA;
 }
 #setting-menu li:hover a {
-  background-color: #428bca !important;
-  color: #fff !important;
-}
-#setting-menu li.current {
-  border-color: #888;
+  border-left: 2px solid #EFEFEF;
+  background-color: #EFEFEF !important;
+  color: #000 !important;
 }
 #setting-menu li.current a {
-  background-color: #888 !important;
-  color: #FFF !important;
+  color: #000 !important;
+  font-weight: bold;
+  border-left: 2px solid #d26911;
 }
 .setting-content {
   margin-left: 32px;
