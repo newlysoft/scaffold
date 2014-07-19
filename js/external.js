@@ -9,5 +9,12 @@ $(function(){
         });
     }(jQuery));
 
+    // promo register button click event
+    (function($){
+        $('#register-button').click(function() {
+            $('#promo-form').attr('action', '/user/sign_up');
+        });
+    }(jQuery));
+
 });
 

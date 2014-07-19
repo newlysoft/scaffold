@@ -1,1 +1,1 @@
-$(function(){!function($){var o=$("#footer-lang li").length;$("#footer-lang .drop-down").css({top:-31*o-2+"px",height:31*o-3+"px"})}(jQuery)});
+$(function(){!function($){var o=$("#footer-lang li").length;$("#footer-lang .drop-down").css({top:-31*o-2+"px",height:31*o-3+"px"})}(jQuery),function($){$("#register-button").click(function(){$("#promo-form").attr("action","/user/sign_up")})}(jQuery)});
