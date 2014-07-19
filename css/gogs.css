@@ -422,6 +422,9 @@ The register and sign-in page style
 .sign-form.form-align .form-label {
   width: 160px;
 }
+.sign-form.form-align .alert {
+  margin: 0 30px 24px 30px;
+}
 .sign-form.container {
   padding: 0;
   width: 600px;
