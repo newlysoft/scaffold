@@ -174,11 +174,13 @@ img.avatar-24 {
 }
 .social-buttons .qq {
   background-color: #03a2ef;
+  box-shadow: 0 0 1px #1c6399;
 }
 .social-buttons .qq:hover {
-  background-color: #4abaff;
+  background-color: #3cb3ff;
 }
 #promo-wrapper {
+  padding-top: 50px;
   background-color: #428bca;
 }
 #promo-logo {
