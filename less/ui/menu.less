@@ -102,6 +102,28 @@ ul.menu-down {
   background-color: @menuDownBgColor;
 }
 
+ul.menu-radius {
+  border-radius: .3em;
+  > li {
+    &:first-child {
+      border-top-left-radius: .3em;
+      border-top-right-radius: .3em;
+      > a {
+        border-top-left-radius: .2em;
+        border-top-right-radius: .2em;
+      }
+    }
+    &:last-child {
+      border-bottom-left-radius: .3em;
+      border-bottom-right-radius: .3em;
+      > a {
+        border-bottom-left-radius: .2em;
+        border-bottom-right-radius: .2em;
+      }
+    }
+  }
+}
+
 .drop {
   position: relative;
   &:hover {

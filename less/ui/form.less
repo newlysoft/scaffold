@@ -145,6 +145,11 @@ input[readonly] {
   label {
     margin-right: 1em;
   }
+  .help{
+    color: @formHelpFontColor;
+    padding-top: .6em;
+    display: inline-block;
+  }
 }
 
 .form-stack {
@@ -166,5 +171,12 @@ input[readonly] {
   }
   .field {
     margin-bottom: 1em;
+  }
+}
+
+label.req{
+  &:after{
+    content: "*";
+    color: @labelRedColor;
   }
 }
