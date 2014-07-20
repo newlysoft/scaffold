@@ -4,6 +4,7 @@
 @repoHeaderBgColor: #FFF;
 @repoHeaderNameColor: #888;
 
+/* repository main */
 #repo-header {
   height: 69px;
   border-bottom: 1px solid @repoHeaderBorderColor;
@@ -199,4 +200,51 @@
 #repo-main {
   padding-right: 40px;
   box-sizing: border-box;
+}
+
+/* repository create */
+
+#repo-create-form {
+  width: 800px;
+  margin: 60px auto 150px auto;
+  h2 {
+    margin: .5em 1em;
+  }
+  .field {
+    margin: 1.2em 0 2em 0;
+  }
+  .ipt {
+    width: 540px;
+  }
+  textarea {
+    height: 120px;
+  }
+  .avatar {
+    vertical-align: middle;
+    margin-right: .6em;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+#repo-create-cancel {
+  margin-left: 4em;
+}
+
+#repo-create-owner-list {
+  .octicon {
+    margin-right: 12px;
+    opacity: 0;
+  }
+  top: 30px;
+  left: 0;
+  .avatar {
+    width: 20px;
+    height: 20px;
+  }
+  li.checked {
+    .octicon {
+      opacity: 1;
+    }
+  }
 }

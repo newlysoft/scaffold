@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>New Repository</title>
+    <link rel="stylesheet" href="../css/ui.css"/>
+    <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../font/font-awesome.css"/>
+    <link rel="stylesheet" href="../css/gogs.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <ul class="menu menu-line container" id="header-nav"><! -- external nav -->
+            <li class="right" id="header-nav-sign-in">
+                <a href="#" title="Sign In"><i class="octicon octicon-sign-in"></i>&nbsp;&nbsp;SignIn</a>
+            </li>
+            <li class="right">
+                <a href="#" title="Account Settings"><i class="octicon octicon-person-add"></i>&nbsp;&nbsp;Register</a>
+            </li>
+            <!-- base nav -->
+            <li class="head" id="header-nav-logo">
+                <img src="../img/favicon.png" alt="" class="avatar-30"/>
+            </li>
+            <li class="current"><a href="#">Dashboard</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </header>
+    <div id="repo-wrapper">
+        <form id="repo-create-form" class="form form-align panel panel-radius" action="#">
+            <div class="panel-header"><h2>Create New Repository</h2></div>
+            <div class="panel-content">
+                <div class="field">
+                    <label for="owner" class="req">Owner</label>
+                    <input id="owner" type="hidden" name="owner"/>
+                    <div class="inline-block drop">
+                        <a href="#" class="drop-bottom">
+                            <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=28" alt="user-avatar" title="username" class="avatar">
+                            <strong>fuxiaohei</strong>
+                        </a>
+                        <ul class="drop-down menu menu-vertical menu-radius switching-list" id="repo-create-owner-list">
+                            <li><a href="#"><i class="octicon octicon-check"></i>
+                                <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=20" alt="user-avatar" title="username" class="avatar">
+                                <strong>fuxiaohei</strong></a>
+                            </li>
+                            <li class="checked"><a href="#"><i class="octicon octicon-check"></i>
+                                <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=20" alt="user-avatar" title="username" class="avatar">
+                                <strong>fuxiaohei2</strong></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="repo-name" class="req">Repository</label>
+                    <input id="repo-name" class="ipt ipt-radius" type="text" required="required" placeholder="repository name"/>
+                    <span class="form-label"></span>
+                    <span class="help">Great repository names are short, memorable and <strong>unique</strong>.</span>
+                </div>
+                <p class="field">
+                    <label for="visibility">Visibility</label>
+                    <input id="visibility" type="checkbox" name="visibility" class="ipt-chk"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>This repository is&nbsp;&nbsp;<span class="label label-red label-radius">Private</span></span>
+                </p>
+                <div class="field clear">
+                    <label class="left" for="desc">Description</label>
+                    <textarea class="ipt ipt-radius" name="desc" id="desc"></textarea>
+                </div>
+                <p class="field">
+                    <label for="lang">Language</label>
+                    <select name="lang" id="lang">
+                        <option value="0">Select a language</option>
+                        <option value="go">Google Go</option>
+                    </select>
+                    <label for="license">License</label>
+                    <select name="license" id="license">
+                        <option value="0">Select a License</option>
+                        <option value="mit">MIT License</option>
+                    </select>
+                </p>
+                <p class="field">
+                    <label for="init-readme">&nbsp;</label>
+                    <input id="init-readme" type="checkbox" class="ipt-chk"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <strong>Initialize this repository with a README</strong>
+                </p>
+                <p class="field">
+                    <label for="repo-create-submit">&nbsp;</label>
+                    <button class="btn btn-large btn-blue btn-radius" id="repo-create-submit">Create Repository</button>
+                    <button class="btn btn-small btn-gray btn-radius" id="repo-create-cancel"><strong>Cancel</strong></button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
+            Template: <strong>0ms</strong></p>
+
+        <p class="right" id="footer-links">
+            <a href="#"><i class="octicon octicon-mark-github"></i></a>
+            <a href="#">Official</a>
+            <span class="version">Go1.3</span>
+        </p>
+        <span class="clear"></span>
+    </div>
+</footer>
+</body>
+</html>

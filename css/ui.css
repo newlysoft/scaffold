@@ -458,6 +458,11 @@ input[readonly]:focus {
 .form label {
   margin-right: 1em;
 }
+.form .help {
+  color: #999999;
+  padding-top: .6em;
+  display: inline-block;
+}
 .form-stack label {
   display: block;
 }
@@ -473,6 +478,10 @@ input[readonly]:focus {
 }
 .form-align .field {
   margin-bottom: 1em;
+}
+label.req:after {
+  content: "*";
+  color: #d9453d;
 }
 ul.menu > li {
   list-style: none;
@@ -567,6 +576,25 @@ ul.menu-down {
   box-shadow: 0 0 2px #666666;
   background-color: #ffffff;
 }
+ul.menu-radius {
+  border-radius: .3em;
+}
+ul.menu-radius > li:first-child {
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+}
+ul.menu-radius > li:first-child > a {
+  border-top-left-radius: .2em;
+  border-top-right-radius: .2em;
+}
+ul.menu-radius > li:last-child {
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+}
+ul.menu-radius > li:last-child > a {
+  border-bottom-left-radius: .2em;
+  border-bottom-right-radius: .2em;
+}
 .drop {
   position: relative;
 }
@@ -646,6 +674,12 @@ ul.menu-down {
 }
 .label-radius {
   border-radius: .2em;
+}
+.label-link {
+  color: #ffffff;
+}
+.label-link:hover {
+  color: #ffffff;
 }
 .breads .bread:after {
   content: "/";
