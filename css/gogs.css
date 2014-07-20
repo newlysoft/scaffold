@@ -501,6 +501,7 @@ The register and sign-in page style
   background-color: #FFF;
   margin-left: -15px;
 }
+/* repository main */
 #repo-header {
   height: 69px;
   border-bottom: 1px solid #d6d6d6;
@@ -656,6 +657,47 @@ The register and sign-in page style
 #repo-main {
   padding-right: 40px;
   box-sizing: border-box;
+}
+/* repository create */
+#repo-create-form {
+  width: 800px;
+  margin: 60px auto 150px auto;
+}
+#repo-create-form h2 {
+  margin: .5em 1em;
+}
+#repo-create-form .field {
+  margin: 1.2em 0 2em 0;
+}
+#repo-create-form .ipt {
+  width: 540px;
+}
+#repo-create-form textarea {
+  height: 120px;
+}
+#repo-create-form .avatar {
+  vertical-align: middle;
+  margin-right: .6em;
+  width: 28px;
+  height: 28px;
+}
+#repo-create-cancel {
+  margin-left: 4em;
+}
+#repo-create-owner-list {
+  top: 30px;
+  left: 0;
+}
+#repo-create-owner-list .octicon {
+  margin-right: 12px;
+  opacity: 0;
+}
+#repo-create-owner-list .avatar {
+  width: 20px;
+  height: 20px;
+}
+#repo-create-owner-list li.checked .octicon {
+  opacity: 1;
 }
 #setting-menu {
   box-sizing: border-box;
