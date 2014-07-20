@@ -5,8 +5,8 @@ The dashboard page style
 */
 
 @dashboardHeaderBorderColor: #D6D6D6;
-@dashboardHeaderLinkColor:#444;
-@dashboardHeaderLinkHoverColor:#D9453D;
+@dashboardHeaderLinkColor: #444;
+@dashboardHeaderLinkHoverColor: #D9453D;
 @dashboardSwitchMenuHoverBgColor: @linkColor;
 @dashboardSwitchMenuHoverFontColor: #FFF;
 
@@ -30,9 +30,9 @@ The dashboard page style
           margin-right: 6px;
         }
       }
-        .current {
-          border-bottom: 2px solid #D26911;
-        }
+      .current {
+        border-bottom: 2px solid #D26911;
+      }
     }
   }
 }
@@ -56,10 +56,14 @@ The dashboard page style
   }
   > .panel {
     margin-bottom: 24px;
+    border-bottom-left-radius: .3em;
+    border-bottom-right-radius: .3em;
   }
 }
 
 #dashboard-sidebar-menu {
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
   > li {
     border: 1px solid #d6d6d6;
     float: left;
@@ -70,6 +74,12 @@ The dashboard page style
       padding-bottom: .4em;
     }
   }
+  > li.first {
+    border-top-left-radius: .3em;
+    > a {
+      border-top-left-radius: .3em;
+    }
+  }
   > li.drop {
     border: none;
     float: right;
@@ -78,6 +88,12 @@ The dashboard page style
   height: 35px;
   > li.js-tab-nav-show {
     background-color: #EEEEEE;
+  }
+  > li.last {
+    border-top-right-radius: .3em;
+    > a {
+      border-top-right-radius: .3em;
+    }
   }
 }
 
@@ -138,6 +154,8 @@ The dashboard page style
   .octicon {
     font-size: 2em;
   }
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
 }
 
 // the drop-down menu of #dashboard-new-repo
@@ -169,6 +187,12 @@ The dashboard page style
         margin-right: 12px;
       }
     }
+    &:last-child {
+      > a {
+        border-bottom-left-radius: .3em;
+        border-bottom-right-radius: .3em;
+      }
+    }
   }
   > li.org > a {
     .octicon {
@@ -181,6 +205,8 @@ The dashboard page style
     }
     font-weight: bold;
   }
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
 }
 
 #dashboard-news {
@@ -210,3 +236,4 @@ The dashboard page style
     }
   }
 }
+
