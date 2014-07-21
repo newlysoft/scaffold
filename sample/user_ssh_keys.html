@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SSH Keys</title>
+    <link rel="stylesheet" href="../css/ui.css"/>
+    <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../css/gogs.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <ul class="menu menu-line container" id="header-nav">
+            <li class="head" id="header-nav-logo">
+                <img src="../img/favicon.png" alt="" class="avatar-30"/>
+            </li>
+            <li class="current"><a href="#">Dashboard</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Help</a></li> <!-- user header nav -->
+            <li class="right" id="header-nav-sign-out">
+                <a href="#" title="Sign Out"><i class="octicon octicon-sign-out"></i></a>
+            </li>
+            <li class="right">
+                <a href="#" title="Account Settings"><i class="octicon octicon-settings"></i></a>
+            </li>
+            <li class="right">
+                <a href="#" title="Administration"><i class="octicon octicon-stop"></i></a>
+            </li>
+            <li class="right down">
+                <a href="#" title="New Repository or Organizations"><i class="octicon octicon-plus"></i></a>
+                <ul class="menu menu-down" id="header-new-repo-menu">
+                    <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
+                    <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                    <li><a href="#"><i class="octicon octicon-repo-clone"></i>New Migration</a></li>
+                </ul>
+            </li>
+            <li class="right" id="header-nav-user">
+                <a href="#" class="text-bold">
+                    <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=30" alt="user-avatar" class="avatar-30"/>
+                    fuxiaohei
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div id="setting-wrapper" class="main-wrapper">
+        <div id="user-ssh-setting" class="container clear">
+            <div id="setting-menu" class="grid-1-5 panel panel-radius left">
+                <p class="panel-header"><strong>Settings</strong></p>
+                <div class="panel-body">
+                    <ul class="menu menu-vertical switching-list grid-1-5 left">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Password</a></li>
+                        <li class="current"><a href="#">SSH Keys</a></li>
+                        <li><a href="#">Socials</a></li>
+                        <li><a href="#">Kill Self</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="setting-content" class="grid-4-5 left">
+                <div class="setting-content">
+                    <p><strong>Need help?</strong> Check out our guide to <a href="#">generating SSH keys</a> or troubleshoot
+                        <a href="#">common SSH Problems</a></p>
+                    <div id="user-ssh-setting-content">
+                        <div id="user-ssh-panel" class="panel panel-radius">
+                            <p class="panel-header clear">
+                                <button class="btn btn-small btn-black btn-radius right" id="ssh-add">Add Key</button>
+                                <strong>SSH Keys</strong>
+                            </p>
+                            <ul class="panel-body menu menu-vertical switching-list">
+                                <li>This is a list of SSH keys associated with your account. Remove any keys that you do not recognize.
+                                <li class="ssh clear">
+                                    <span class="active-icon left label label-green label-radius"></span>
+                                    <i class="mega-octicon octicon-key left"></i>
+                                    <div class="ssh-content left">
+                                        <p><strong>GitHub for Windows - FuXiaoHei-PC</strong></p>
+                                        <p class="print">0a:b9:4c:61:e1:35:9c:dc:80:01:5e:ac:64:31:b6:e0</p>
+                                        <p class="activity"><i>Added on 24 Aug 2012 —  <i class="octicon octicon-info"></i>No recent activity</i></p>
+                                    </div>
+                                    <button class="right ssh-delete-btn btn btn-red btn-radius btn-small">Delete</button>
+                                </li>
+                                <li class="ssh clear">
+                                    <span class="active-icon left label label-green label-radius"></span>
+                                    <i class="mega-octicon octicon-key left"></i>
+                                    <div class="ssh-content left">
+                                        <p><strong>GitHub for Windows - FuXiaoHei-PC</strong></p>
+                                        <p class="print">0a:b9:4c:61:e1:35:9c:dc:80:01:5e:ac:64:31:b6:e0</p>
+                                        <p class="activity"><i>Added on 24 Aug 2012 —  <i class="octicon octicon-info"></i>No recent activity</i></p>
+                                    </div>
+                                    <button class="right ssh-delete-btn btn btn-red btn-radius btn-small">Delete</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <form id="user-ssh-add-form" class="panel panel-radius form form-align hide" action="">
+                            <p class="panel-header"><strong>Add SSH Key</strong></p>
+                            <div class="panel-body">
+                                <p class="field">
+                                    <label for="ssh-title">Title</label>
+                                    <input id="ssh-title" class="ipt ipt-radius" type="text"/>
+                                </p>
+                                <p class="field clear">
+                                    <label class="left" for="ssh-key">Key</label>
+                                    <textarea class="ipt ipt-radius left" name="" id="ssh-key"></textarea>
+                                </p>
+                                <p class="field">
+                                    <label for="ssh-add-btn">&nbsp;</label>
+                                    <button class="btn btn-green btn-radius" id="ssh-add-btn">Add Key</button>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
+            Template: <strong>0ms</strong></p>
+
+        <p class="right" id="footer-links">
+            <a href="#"><i class="octicon octicon-mark-github"></i></a>
+            <a href="#">Official</a>
+            <span class="version">Go1.3</span>
+        </p>
+    </div>
+</footer>
+<script src="../js/lib/jquery-1.11.1.min.js"></script>
+<script src="../js/settings.js"></script>
+</body>
+</html>
