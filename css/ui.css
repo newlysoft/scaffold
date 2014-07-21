@@ -291,6 +291,9 @@ p code {
   height: 0;
   display: block;
 }
+.hide {
+  display: none;
+}
 .grid-1-12 {
   width: 8.33%;
 }

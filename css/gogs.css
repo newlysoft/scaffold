@@ -699,6 +699,9 @@ The register and sign-in page style
 #repo-create-owner-list li.checked .octicon {
   opacity: 1;
 }
+#setting-wrapper {
+  padding-bottom: 100px;
+}
 #setting-menu {
   box-sizing: border-box;
 }
@@ -734,5 +737,55 @@ The register and sign-in page style
   width: 360px;
 }
 #user-profile-form .field {
+  margin-bottom: 24px;
+}
+#user-ssh-setting-content {
+  margin-top: 1em;
+}
+#user-ssh-panel {
+  margin-bottom: 30px;
+}
+#user-ssh-panel .switching-list {
+  background-color: #FFF;
+}
+#user-ssh-panel .switching-list li {
+  padding: 8px 20px;
+}
+#user-ssh-panel .switching-list li.ssh:hover {
+  background-color: #ffffEE;
+}
+#user-ssh-panel .active-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  padding: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+#user-ssh-panel .ssh-content {
+  margin-left: 24px;
+}
+#user-ssh-panel .ssh-content .octicon {
+  margin-right: 4px;
+}
+#user-ssh-panel .ssh-content .print,
+#user-ssh-panel .ssh-content .activity {
+  color: #888;
+}
+#user-ssh-panel .ssh-delete-btn {
+  margin-top: 6px;
+}
+#user-ssh-add-form .panel-body {
+  background-color: #FFF;
+  padding: 30px 0;
+}
+#user-ssh-add-form .ipt {
+  width: 500px;
+}
+#user-ssh-add-form textarea {
+  height: 120px;
+  margin-left: 3px;
+}
+#user-ssh-add-form .field {
   margin-bottom: 24px;
 }
