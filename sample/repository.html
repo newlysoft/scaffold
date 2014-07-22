@@ -57,28 +57,28 @@
             <ul id="repo-header-meta" class="right menu menu-line">
                 <li id="repo-header-download" class="inline-block down drop">
                     <a id="repo-header-download-btn" href="#">
-                        <button class="btn btn-black text-bold">
+                        <button class="btn btn-black text-bold btn-radius">
                             <i class="octicon octicon-cloud-download"></i>
                         </button>
                     </a>
                     <div id="repo-header-download-drop" class="drop-down">
                         <div id="repo-clone" class="clear">
-                            <button id="repo-clone-ssh" class="btn btn-blue current left">SSH</button>
+                            <button id="repo-clone-ssh" class="btn btn-blue current left btn-left-radius">SSH</button>
                             <button id="repo-clone-https" class="btn btn-gray left">HTTPS</button>
                             <input id="repo-clone-url" type="text" class="ipt ipt-disabled left"/>
-                            <button id="repo-clone-copy" class="btn btn-black left">Copy</button>
+                            <button id="repo-clone-copy" class="btn btn-black left btn-right-radius">Copy</button>
                             <p class="text-center" id="repo-clone-help">Need help cloning? Visit <a href="#">Help</a>!</p>
                             <hr/>
                             <div class="text-center" id="repo-clone-zip">
-                                <button class="btn btn-green"><i class="octicon octicon-file-zip"></i>ZIP</button>
-                                <button class="btn btn-green"><i class="octicon octicon-file-zip"></i>TAR.GZ</button>
+                                <button class="btn btn-green btn-radius"><i class="octicon octicon-file-zip"></i>ZIP</button>
+                                <button class="btn btn-green btn-radius"><i class="octicon octicon-file-zip"></i>TAR.GZ</button>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="repo-header-watch">
                     <a id="repo-header-watch-btn" href="#">
-                        <button class="btn btn-gray text-bold">
+                        <button class="btn btn-gray text-bold btn-radius">
                             <i class="octicon octicon-eye-watch"></i>Watch
                             <span class="num">645</span>
                         </button>
@@ -86,7 +86,7 @@
                 </li>
                 <li id="repo-header-star">
                     <a id="repo-header-star-btn" href="#">
-                        <button class="btn btn-gray text-bold">
+                        <button class="btn btn-gray text-bold btn-radius">
                             <i class="octicon octicon-star"></i>Star
                             <span class="num">1827</span>
                         </button>
@@ -94,7 +94,7 @@
                 </li>
                 <li id="repo-header-fork">
                     <a id="repo-header-fork-btn" href="#">
-                        <button class="btn btn-gray text-bold">
+                        <button class="btn btn-gray text-bold btn-radius">
                             <i class="octicon octicon-repo-forked"></i>Fork
                             <span class="num">47</span>
                         </button>
@@ -113,12 +113,12 @@
             <ul id="repo-file-nav" class="clear menu menu-line">
                 <li>
                     <a href="#">
-                        <button class="btn btn-green btn-small" id="repo-compare-btn"><i class="octicon octicon-git-compare"></i></button>
+                        <button class="btn btn-green btn-small btn-radius" id="repo-compare-btn"><i class="octicon octicon-git-compare"></i></button>
                     </a>
                 </li>
                 <li id="repo-branch-switch" class="down drop">
                     <a href="#">
-                        <button class="btn btn-gray btn-small">
+                        <button class="btn btn-gray btn-small btn-radius">
                             <i class="octicon octicon-git-branch"></i> branch :
                             <strong id="repo-branch-current">master</strong>
                         </button>
@@ -153,35 +153,92 @@
                 </li>
                 <li id="repo-commits-jump" class="repo-jump right">
                     <a href="#">
-                        <button class="btn btn-small btn-gray"><i class="octicon octicon-git-commit"></i></button>
+                        <button class="btn btn-small btn-gray btn-right-radius"><i class="octicon octicon-git-commit"></i></button>
                     </a>
                 </li>
                 <li id="repo-find-jump" class="repo-jump right">
                     <a href="#">
-                        <button class="btn btn-small btn-gray"><i class="octicon octicon-list-unordered"></i></button>
+                        <button class="btn btn-small btn-gray btn-left-radius"><i class="octicon octicon-list-unordered"></i></button>
                     </a>
                 </li>
             </ul>
+            <table id="repo-files-table" class="table-border table-block table-radius">
+                <thead>
+                <tr>
+                    <th colspan="5" class="clear">
+                        <span class="author left">
+                            <img src="https://avatars2.githubusercontent.com/u/563872?s=140" alt="" class="avatar-24 radius"/>
+                            <a href="#"><strong>HouzuoGuo</strong>:</a>
+                        </span>
+                        <span class="last-commit"><a href="#"><strong>f23e1cb417</strong></a>
+                            <span class="text-truncate">travis is way too slow...</span>
+                        </span>
+                        <span class="age right">4 days ago</span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="icon">
+                        <span class="octicon octicon-file-directory"></span>
+                    </td>
+                    <td class="name">
+                        <a href="#" class="text-truncate">data</a>
+                    </td>
+                    <td class="msg">
+                        <a href="#" class="text-truncate">remove several overly verbosive log messages; rate-limit logs of data structure failures</a>
+                    </td>
+                    <td class="age">4 days ago</td>
+                    <td class="size"></td>
+                </tr>
+                <tr>
+                    <td class="icon">
+                        <span class="octicon octicon-file-directory"></span>
+                    </td>
+                    <td class="name">
+                        <a href="#" class="text-truncate">data</a>
+                    </td>
+                    <td class="msg">
+                        <a href="#" class="text-truncate">remove several overly verbosive log messages; rate-limit logs of data structure failures,remove several overly verbosive log messages; rate-limit logs of data structure failures</a>
+                    </td>
+                    <td class="age">4 days ago</td>
+                    <td class="size"></td>
+                </tr>
+                <tr>
+                    <td class="icon">
+                        <span class="octicon octicon-file-text"></span>
+                    </td>
+                    <td class="name">
+                        <a href="#" class="text-truncate">test.file</a>
+                    </td>
+                    <td class="msg">
+                        <a href="#" class="text-truncate">remove several overly verbosive log messages; rate-limit logs of data structure failures</a>
+                    </td>
+                    <td class="age">4 days ago</td>
+                    <td class="size">11.12 K</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
         <div id="repo-sidebar" class="right grid-1-5">
             <ul class="menu menu-vertical" id="repo-sidebar-nav">
-                <li><a href="#"><i class="octicon octicon-issue-opened"></i>issues
-                    <span class="num right label label-blue">12</span>
+                <li><a href="#" class="radius"><i class="octicon octicon-issue-opened"></i>issues
+                    <span class="num right label label-blue label-radius">12</span>
                 </a></li>
-                <li><a href="#"><i class="octicon octicon-git-pull-request"></i>pull requests
-                    <span class="num right label label-blue">3</span>
+                <li><a href="#" class="radius"><i class="octicon octicon-git-pull-request"></i>pull requests
+                    <span class="num right label label-blue label-radius">3</span>
                 </a></li>
                 <li class="border-bottom"></li>
                 <li class="head">master</li>
-                <li><a href="#"><i class="octicon octicon-history"></i>commits <span class="num right label label-gray">1234</span></a></li>
-                <li><a href="#"><i class="octicon octicon-git-branch"></i>branches <span
-                        class="num right label label-gray">2</span></a></li>
-                <li><a href="#"><i class="octicon octicon-tag"></i>releases <span
-                        class="num right label label-gray">6</span></a></li>
-                <li><a href="#"><i class="octicon octicon-organization"></i>contributors <span
-                        class="num right label label-gray">43</span></a></li>
+                <li><a href="#" class="radius"><i class="octicon octicon-history"></i>commits <span class="num right label label-gray label-radius">1234</span></a></li>
+                <li><a href="#" class="radius"><i class="octicon octicon-git-branch"></i>branches <span
+                        class="num right label label-gray label-radius">2</span></a></li>
+                <li><a href="#" class="radius"><i class="octicon octicon-tag"></i>releases <span
+                        class="num right label label-gray label-radius">6</span></a></li>
+                <li><a href="#" class="radius"><i class="octicon octicon-organization"></i>contributors <span
+                        class="num right label label-gray label-radius">43</span></a></li>
                 <li class="border-bottom"></li>
-                <li><a href="#"><i class="octicon octicon-tools"></i>settings</a></li>
+                <li><a href="#" class="radius"><i class="octicon octicon-tools"></i>settings</a></li>
             </ul>
         </div>
     </div>

@@ -1,1 +1,1 @@
-$(function(){$("#ssh-add").on("click",function(s){alert(s);var a=$("#user-ssh-add-form");a.hasClass("hide")?a.removeClass("hide"):a.addClass("hide")})});
+$(function(){$("#ssh-add").on("click",function(s){var d=$("#user-ssh-add-form");d.hasClass("hide")?d.removeClass("hide"):d.addClass("hide")})});

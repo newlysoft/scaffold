@@ -278,6 +278,13 @@ p code {
 .radius {
   border-radius: .25em;
 }
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: top;
+}
 .left {
   float: left;
 }
@@ -410,6 +417,14 @@ p code {
 }
 .btn-radius {
   border-radius: .25em;
+}
+.btn-left-radius {
+  border-top-left-radius: .25em;
+  border-bottom-left-radius: .25em;
+}
+.btn-right-radius {
+  border-top-right-radius: .25em;
+  border-bottom-right-radius: .25em;
 }
 .btn-block {
   display: block;
@@ -635,7 +650,7 @@ ul.menu-radius > li:last-child > a {
   margin-bottom: 20px;
 }
 .panel .panel-content {
-  padding: .6em 1.2em;
+  padding: 1em 1.2em;
 }
 .panel .panel-footer {
   padding: .6em 1.2em;
@@ -652,6 +667,13 @@ ul.menu-radius > li:last-child > a {
 .panel.panel-radius .panel-footer {
   border-bottom-left-radius: .3em;
   border-bottom-right-radius: .3em;
+}
+.panel.panel-warning {
+  border-color: #F0C36D;
+}
+.panel.panel-warning > .panel-header {
+  background-color: #F9EDBE;
+  border-color: #F0C36D;
 }
 .label {
   padding: 2px 6px;
@@ -697,7 +719,6 @@ ul.menu-radius > li:last-child > a {
 .alert {
   padding: .6em 1.5em;
   margin-bottom: 10px;
-  width: 100%;
 }
 .alert i {
   margin-right: 8px;
@@ -729,4 +750,55 @@ ul.menu-radius > li:last-child > a {
   color: #df7514;
   border: 1px solid #b05c10;
   background-color: #fcecdd;
+}
+table th,
+table td {
+  padding: .3em .6em;
+  line-height: 30px;
+}
+.table-border {
+  border: 1px solid #d6d6d6;
+}
+.table-border tr {
+  border-top: 1px solid #eaeaea;
+}
+.table-border tr:first-child {
+  border-top: none;
+}
+.table-border thead {
+  border-bottom: 1px solid #d6d6d6;
+}
+.table-block {
+  width: 100%;
+  box-sizing: border-box;
+}
+.table-radius {
+  border-radius: .3em;
+}
+.table-radius thead:first-child {
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+}
+.table-radius thead:first-child tr:first-child {
+  border-top-left-radius: .3em;
+}
+.table-radius thead:first-child tr:first-child > th:first-child {
+  border-top-left-radius: .3em;
+}
+.table-radius thead:first-child tr:first-child > th:last-child {
+  border-top-right-radius: .3em;
+}
+.table-radius tbody {
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+}
+.table-radius tbody tr:last-child {
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+}
+.table-radius tbody tr:last-child > td:first-child {
+  border-bottom-left-radius: .3em;
+}
+.table-radius tbody tr:last-child > td:last-child {
+  border-bottom-right-radius: .3em;
 }

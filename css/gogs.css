@@ -15,14 +15,19 @@ body {
   padding: 0 1.5em;
   margin: auto;
 }
-img.avatar-30 {
-  width: 30px;
-  height: 30px;
+img.avatar-16 {
+  width: 16px;
+  height: 16px;
   vertical-align: middle;
 }
 img.avatar-24 {
   width: 24px;
   height: 24px;
+  vertical-align: middle;
+}
+img.avatar-30 {
+  width: 30px;
+  height: 30px;
   vertical-align: middle;
 }
 #wrapper {
@@ -349,6 +354,9 @@ The dashboard page style
 #dashboard-my-repo li {
   border-bottom: 1px solid #EAEAEA;
 }
+#dashboard-my-repo li.private {
+  background-color: #fcf8e9;
+}
 #dashboard-my-repo li:last-child {
   border-bottom: none;
 }
@@ -555,6 +563,8 @@ The register and sign-in page style
   color: #FFF;
   border-top: 1px solid #444444;
   border-bottom: 1px solid #444444;
+  border-top-right-radius: .25em;
+  border-bottom-right-radius: .25em;
 }
 #repo-header-download-drop {
   line-height: 24px;
@@ -594,6 +604,9 @@ The register and sign-in page style
 }
 #repo-sidebar-nav i {
   margin-right: 6px;
+}
+#repo-file-nav {
+  padding: .6em 0 1em 0;
 }
 #repo-file-nav > li > a {
   padding-left: 0;
@@ -658,10 +671,67 @@ The register and sign-in page style
   padding-right: 40px;
   box-sizing: border-box;
 }
+#repo-files-table th,
+#repo-files-table td {
+  text-align: left;
+  line-height: 32px;
+}
+#repo-files-table td.icon {
+  width: 16px;
+  padding-right: .1em;
+  padding-left: 1em;
+}
+#repo-files-table td.name,
+#repo-files-table td.age,
+#repo-files-table td.size {
+  max-width: 180px;
+}
+#repo-files-table td.msg {
+  max-width: 440px;
+}
+#repo-files-table td.msg .text-truncate {
+  max-width: 100%;
+}
+#repo-files-table td.age,
+#repo-files-table td.size,
+#repo-files-table td.msg a {
+  color: #888;
+}
+#repo-files-table td.msg a:hover {
+  color: #428BCA;
+  text-decoration: underline;
+}
+#repo-files-table td.size {
+  text-align: center;
+}
+#repo-files-table tbody {
+  background-color: #FFF;
+}
+#repo-files-table tbody tr:hover {
+  background-color: #ffffEE;
+}
+#repo-files-table thead {
+  background-color: #F0F0F0;
+}
+#repo-files-table thead .author a {
+  margin: 0 .4em;
+}
+#repo-files-table thead .last-commit strong {
+  color: #444;
+}
+#repo-files-table thead .last-commit .text-truncate {
+  margin-left: .4em;
+}
+#repo-files-table thead .last-commit .text-truncate,
+#repo-files-table thead .age {
+  font-weight: normal;
+  color: #888;
+}
 /* repository create */
 #repo-create-form {
   width: 800px;
   margin: 60px auto 150px auto;
+  background: white;
 }
 #repo-create-form h2 {
   margin: .5em 1em;
@@ -680,6 +750,9 @@ The register and sign-in page style
   margin-right: .6em;
   width: 28px;
   height: 28px;
+}
+#repo-create-form:hover {
+  box-shadow: 0px 0px 6px #CCC;
 }
 #repo-create-cancel {
   margin-left: 4em;
@@ -739,11 +812,8 @@ The register and sign-in page style
 #user-profile-form .field {
   margin-bottom: 24px;
 }
-#user-ssh-setting-content {
-  margin-top: 1em;
-}
 #user-ssh-panel {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #user-ssh-panel .switching-list {
   background-color: #FFF;
