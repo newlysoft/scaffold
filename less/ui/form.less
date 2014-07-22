@@ -80,6 +80,16 @@
   border-radius: .25em;
 }
 
+.btn-left-radius {
+  border-top-left-radius: .25em;
+  border-bottom-left-radius: .25em;
+}
+
+.btn-right-radius {
+  border-top-right-radius: .25em;
+  border-bottom-right-radius: .25em;
+}
+
 .btn-block {
   display: block;
   width: 100%;
@@ -101,8 +111,8 @@
 
 // input form elements
 
-.ipt{
-  &:focus{
+.ipt {
+  &:focus {
     border-color: @iptFocusBorderColor;
   }
 }
@@ -136,7 +146,7 @@ input[readonly] {
   }
 }
 
-.ipt-error{
+.ipt-error {
   border-color: @iptErrorBorderColor !important;
   background-color: @iptErrorFocusColor !important;
 }
@@ -145,7 +155,7 @@ input[readonly] {
   label {
     margin-right: 1em;
   }
-  .help{
+  .help {
     color: @formHelpFontColor;
     padding-top: .6em;
     display: inline-block;
@@ -174,8 +184,8 @@ input[readonly] {
   }
 }
 
-label.req{
-  &:after{
+label.req {
+  &:after {
     content: "*";
     color: @labelRedColor;
   }

@@ -65,6 +65,8 @@
     color: #FFF;
     border-top: 1px solid @btnBlackColor;
     border-bottom: 1px solid @btnBlackColor;
+    border-top-right-radius: .25em;
+    border-bottom-right-radius: .25em;
   }
 }
 
@@ -117,6 +119,7 @@
 }
 
 #repo-file-nav {
+  padding: .6em 0 1em 0;
   > li > a {
     padding-left: 0;
     &:hover {
@@ -202,6 +205,69 @@
   box-sizing: border-box;
 }
 
+#repo-files-table {
+  th,
+  td {
+    text-align: left;
+    line-height: 32px;
+  }
+  td.icon {
+    width: 16px;
+    padding-right: .1em;
+    padding-left: 1em;
+  }
+  td.name,
+  td.age,
+  td.size {
+    max-width: 180px;
+  }
+  td.msg {
+    max-width: 440px;
+    .text-truncate {
+      max-width: 100%;
+    }
+  }
+  td.age,
+  td.size,
+  td.msg a {
+    color: #888;
+  }
+  td.msg a:hover {
+    color: #428BCA;
+    text-decoration: underline;
+  }
+  td.size {
+    text-align: center;
+  }
+  tbody {
+    background-color: #FFF;
+    tr:hover {
+      background-color: #ffffEE;
+    }
+  }
+  thead {
+    background-color: #F0F0F0;
+    .author {
+      a {
+        margin: 0 .4em;
+      }
+    }
+    .last-commit {
+      strong {
+        color: #444;
+      }
+      .text-truncate{
+        margin-left: .4em;
+      }
+    }
+    .last-commit .text-truncate,
+    .age {
+      font-weight: normal;
+      color: #888;
+    }
+  }
+}
+
 /* repository create */
 
 #repo-create-form {
@@ -227,7 +293,7 @@
     height: 28px;
   }
   &:hover {
-      box-shadow: 0px 0px 6px #CCC;
+    box-shadow: 0px 0px 6px #CCC;
   }
 }
 
