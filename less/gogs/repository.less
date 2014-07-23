@@ -216,10 +216,15 @@
     padding-right: .1em;
     padding-left: 1em;
   }
-  td.name,
-  td.age,
-  td.size {
-    max-width: 180px;
+  td.name {
+    max-width: 10px;
+    .text-truncate {
+      max-width: 100%;
+    }
+  }
+  td.age {
+    max-width: 10px;
+    text-align: right;
   }
   td.msg {
     max-width: 440px;
@@ -235,9 +240,6 @@
   td.msg a:hover {
     color: #428BCA;
     text-decoration: underline;
-  }
-  td.size {
-    text-align: center;
   }
   tbody {
     background-color: #FFF;
