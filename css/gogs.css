@@ -671,6 +671,9 @@ The register and sign-in page style
   padding-right: 40px;
   box-sizing: border-box;
 }
+#repo-files-table {
+  margin-bottom: 40px;
+}
 #repo-files-table th,
 #repo-files-table td {
   text-align: left;
@@ -681,10 +684,15 @@ The register and sign-in page style
   padding-right: .1em;
   padding-left: 1em;
 }
-#repo-files-table td.name,
-#repo-files-table td.age,
-#repo-files-table td.size {
-  max-width: 180px;
+#repo-files-table td.name {
+  max-width: 120px;
+}
+#repo-files-table td.name .text-truncate {
+  max-width: 100%;
+}
+#repo-files-table td.age {
+  max-width: 120px;
+  text-align: right;
 }
 #repo-files-table td.msg {
   max-width: 440px;
@@ -700,9 +708,6 @@ The register and sign-in page style
 #repo-files-table td.msg a:hover {
   color: #428BCA;
   text-decoration: underline;
-}
-#repo-files-table td.size {
-  text-align: center;
 }
 #repo-files-table tbody {
   background-color: #FFF;
@@ -726,6 +731,9 @@ The register and sign-in page style
 #repo-files-table thead .age {
   font-weight: normal;
   color: #888;
+}
+#repo-readme {
+  margin-bottom: 80px;
 }
 /* repository create */
 #repo-create-form {
