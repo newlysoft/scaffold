@@ -285,6 +285,13 @@ p code {
   display: inline-block;
   vertical-align: top;
 }
+pre {
+  line-height: 1.6;
+  overflow: auto;
+  background: #444444;
+  padding: 6px 10px;
+  color: #ffffff;
+}
 .left {
   float: left;
 }

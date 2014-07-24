@@ -359,7 +359,7 @@ p {
 
 // truncate element
 
-.text-truncate{
+.text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -367,3 +367,12 @@ p {
   vertical-align: top;
 }
 
+// code elements
+
+pre {
+  line-height: 1.6;
+  overflow: auto;
+  background: @preBgColor;
+  padding: 6px 10px;
+  color: @preFontColor;
+}
