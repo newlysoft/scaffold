@@ -290,8 +290,101 @@
             </table>
             <div class="panel panel-radius" id="repo-readme">
                 <p class="panel-header"><strong>Readme.md</strong></p>
-                <div class="panel-content">
-                    readme content // todo markdown css
+                <div class="panel-content markdown">
+                    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+                    <a name="user-content-gogs---go-git-service--" class="anchor" href="#gogs---go-git-service--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gogs - Go Git Service <a href="https://app.wercker.com/project/bykey/ad0bdb0bc450ac6f09bc56b9640a50aa"><img src="https://camo.githubusercontent.com/0dc3dbd062ca937e26891ac5363ccdeca0cbe3dd/68747470733a2f2f6170702e776572636b65722e636f6d2f7374617475732f61643062646230626334353061633666303962633536623936343061353061612f732f" alt="wercker status" title="wercker status" data-canonical-src="https://app.wercker.com/status/ad0bdb0bc450ac6f09bc56b9640a50aa/s/" style="max-width:100%;"></a> <a href="https://drone.io/github.com/gogits/gogs/latest"><img src="https://camo.githubusercontent.com/c998174ce4643cd3b43020d314042ac87af4953f/68747470733a2f2f64726f6e652e696f2f6769746875622e636f6d2f676f676974732f676f67732f7374617475732e706e67" alt="Build Status" data-canonical-src="https://drone.io/github.com/gogits/gogs/status.png" style="max-width:100%;"></a>
+                </h1>
+
+                    <p>Gogs(Go Git Service) is a Self Hosted Git Service in the Go Programming Language.</p>
+
+                    <p><a href="https://camo.githubusercontent.com/f659aa70d1f1f88196bbd8adc9a30236726c6713/687474703a2f2f676f77616c6b65722e6f72672f7075626c69632f676f67735f64656d6f2e676966" target="_blank"><img src="https://camo.githubusercontent.com/f659aa70d1f1f88196bbd8adc9a30236726c6713/687474703a2f2f676f77616c6b65722e6f72672f7075626c69632f676f67735f64656d6f2e676966" alt="Demo" data-canonical-src="http://gowalker.org/public/gogs_demo.gif" style="max-width:100%;"></a></p>
+
+                    <h5>
+                        <a name="user-content-current-version-045-alpha" class="anchor" href="#current-version-045-alpha" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current version: 0.4.5 Alpha</h5>
+
+                    <h3>
+                        <a name="user-content-notices" class="anchor" href="#notices" aria-hidden="true"><span class="octicon octicon-link"></span></a>NOTICES</h3>
+
+                    <ul class="task-list">
+                        <li>Due to testing purpose, data of <a href="http://try.gogits.org">try.gogits.org</a> has been reset in <strong>June 21, 2014</strong> and will reset multiple times after. Please do <strong>NOT</strong> put your important data on the site.</li>
+                        <li>Demo site <a href="http://try.gogits.org">try.gogits.org</a> is running under <code>dev</code> branch.</li>
+                    </ul><h4>
+                        <a name="user-content-other-language-version" class="anchor" href="#other-language-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other language version</h4>
+
+                    <ul class="task-list">
+                        <li><a href="/gogits/gogs/blob/master/README_ZH.md">简体中文</a></li>
+                    </ul><h2>
+                        <a name="user-content-purpose" class="anchor" href="#purpose" aria-hidden="true"><span class="octicon octicon-link"></span></a>Purpose</h2>
+
+                    <p>Since we choose to use pure Go implementation of Git manipulation, Gogs certainly supports <strong>ALL platforms</strong>  that Go supports, including Linux, Mac OS X, and Windows with <strong>ZERO</strong> dependency. </p>
+
+                    <p>More importantly, Gogs only needs one binary to setup your own project hosting on the fly!</p>
+
+                    <h2>
+                        <a name="user-content-overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+                    <ul class="task-list">
+                        <li>Please see <a href="http://gogs.io/docs/intro/">Documentation</a> for project design, known issues, and change log.</li>
+                        <li>See <a href="https://trello.com/b/uxAoeLUl/gogs-go-git-service">Trello Board</a> to follow the develop team.</li>
+                        <li>Try it before anything? Do it <a href="http://try.gogits.org/Unknown/gogs">online</a> or go down to <strong>Installation -&gt; Install from binary</strong> section!</li>
+                        <li>Having troubles? Get help from <a href="http://gogs.io/docs/intro/troubleshooting.md">Troubleshooting</a>.</li>
+                    </ul><h2>
+                        <a name="user-content-features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+                    <ul class="task-list">
+                        <li>Activity timeline</li>
+                        <li>SSH/HTTP(S) protocol support</li>
+                        <li>SMTP/LDAP/reverse proxy authentication support</li>
+                        <li>Register/delete/rename account</li>
+                        <li>Create/migrate/mirror/delete/watch/rename/transfer public/private repository</li>
+                        <li>Repository viewer/release/issue tracker/webhooks</li>
+                        <li>Add/remove repository collaborators</li>
+                        <li>Gravatar and cache support</li>
+                        <li>Mail service(register, issue)</li>
+                        <li>Administration panel</li>
+                        <li>Supports MySQL, PostgreSQL and SQLite3</li>
+                        <li>Social account login(GitHub, Google, QQ, Weibo)</li>
+                    </ul><h2>
+                        <a name="user-content-system-requirements" class="anchor" href="#system-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Requirements</h2>
+
+                    <ul class="task-list">
+                        <li>A cheap Raspberry Pi is powerful enough to match the minimal requirement.</li>
+                        <li>4 CPU Cores and 1GB RAM would be the baseline for teamwork.</li>
+                    </ul><h2>
+                        <a name="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+                    <p>Make sure you install <a href="http://gogs.io/docs/installation/">Prerequirements</a> first.</p>
+
+                    <p>There are 5 ways to install Gogs:</p>
+
+                    <ul class="task-list">
+                        <li>
+                            <a href="http://gogs.io/docs/installation/install_from_binary.md">Install from binary</a>: <strong>STRONGLY RECOMMENDED</strong>
+                        </li>
+                        <li><a href="http://gogs.io/docs/installation/install_from_source.md">Install from source</a></li>
+                        <li><a href="http://gogs.io/docs/installation/install_from_packages.md">Install from packages</a></li>
+                        <li><a href="https://github.com/gogits/gogs/tree/master/dockerfiles">Ship with Docker</a></li>
+                        <li><a href="https://github.com/geerlingguy/ansible-vagrant-examples/tree/master/gogs">Install with Vagrant</a></li>
+                    </ul><h2>
+                        <a name="user-content-acknowledgments" class="anchor" href="#acknowledgments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgments</h2>
+
+                    <ul class="task-list">
+                        <li>Router and middleware mechanism of <a href="http://martini.codegangsta.io/">martini</a>.</li>
+                        <li>Mail Service, modules design is inspired by <a href="https://github.com/beego/wetalk">WeTalk</a>.</li>
+                        <li>System Monitor Status is inspired by <a href="https://github.com/fuxiaohei/goblog">GoBlog</a>.</li>
+                        <li>Usage and modification from <a href="http://beego.me">beego</a> modules.</li>
+                        <li>Thanks <a href="http://www.lavachen.cn/">lavachen</a> and <a href="http://weibo.com/rocker1989">Rocker</a> for designing Logo.</li>
+                        <li>Thanks <a href="http://gobuild.io">gobuild.io</a> for providing binary compile and download service.</li>
+                        <li>Great thanks to <a href="http://www.dockboard.org/">Docker China</a> for providing <a href="https://github.com/gogits/gogs/tree/master/dockerfiles">dockerfiles</a>.</li>
+                    </ul><h2>
+                        <a name="user-content-contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+                    <p>The <a href="http://gogs.io/team">core team</a> of this project. See <a href="https://github.com/gogits/gogs/graphs/contributors">contributors page</a> for full list of contributors.</p>
+
+                    <h2>
+                        <a name="user-content-license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+                    <p>This project is under the MIT License. See the <a href="https://github.com/gogits/gogs/blob/master/LICENSE">LICENSE</a> file for the full license text.</p></article>
                 </div>
             </div>
         </div>
