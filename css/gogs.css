@@ -189,6 +189,7 @@ img.avatar-30 {
   padding: 20px 0 40px;
 }
 .markdown {
+  background-color: white;
   font-size: 14px;
   line-height: 24px;
 }
@@ -264,6 +265,9 @@ img.avatar-30 {
 .markdown ul li {
   list-style: inside;
 }
+.markdown ol li {
+  list-style: decimal inside;
+}
 .markdown li {
   line-height: 1.6;
   margin-top: 6px;
@@ -287,9 +291,11 @@ img.avatar-30 {
 .markdown > pre {
   line-height: 1.6;
   overflow: auto;
-  background: #f8f8f8;
   border: 1px solid #ddd;
-  padding: 0;
+  border-radius: .25em;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #f8f8f8;
 }
 .markdown > pre.linenums {
   padding: 0;
@@ -345,10 +351,6 @@ img.avatar-30 {
 .markdown .btn {
   color: #fff;
 }
-.markdown .anchor-wrap {
-  /*margin-top: -50px;*/
-  /*padding-top: 50px;*/
-}
 .markdown h1 a,
 .markdown h2 a,
 .markdown h3 a {
@@ -372,7 +374,7 @@ img.avatar-30 {
   display: inline-block;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
-  margin-right: 8px;
+  margin-left: 30px;
 }
 .markdown a span.octicon-link {
   opacity: 0;
@@ -495,27 +497,6 @@ img.avatar-30 {
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
-}
-/* IE indents via margin-left */
-li.L0,
-li.L1,
-li.L2,
-li.L3,
-li.L4,
-li.L5,
-li.L6,
-li.L7,
-li.L8,
-li.L9 {
-  /* */
-}
-/* Alternate shading for lines */
-li.L1,
-li.L3,
-li.L5,
-li.L7,
-li.L9 {
-  /* */
 }
 #promo-wrapper {
   padding-top: 50px;
@@ -680,32 +661,50 @@ The dashboard page style
 #dashboard-sidebar-menu > li.last > a {
   border-top-right-radius: .3em;
 }
+#dashboard-my-mirror li,
+#dashboard-my-org li,
 #dashboard-my-repo li {
   border-bottom: 1px solid #EAEAEA;
 }
+#dashboard-my-mirror li.private,
+#dashboard-my-org li.private,
 #dashboard-my-repo li.private {
   background-color: #fcf8e9;
 }
+#dashboard-my-mirror li:last-child,
+#dashboard-my-org li:last-child,
 #dashboard-my-repo li:last-child {
   border-bottom: none;
 }
+#dashboard-my-mirror li a,
+#dashboard-my-org li a,
 #dashboard-my-repo li a {
   padding: 6px 1.2em;
   display: block;
 }
+#dashboard-my-mirror li a .octicon,
+#dashboard-my-org li a .octicon,
 #dashboard-my-repo li a .octicon {
   margin-right: 6px;
   color: #888;
 }
+#dashboard-my-mirror li a:hover .repo-name,
+#dashboard-my-org li a:hover .repo-name,
 #dashboard-my-repo li a:hover .repo-name {
   text-decoration: underline;
 }
+#dashboard-my-mirror .repo-name,
+#dashboard-my-org .repo-name,
 #dashboard-my-repo .repo-name {
   font-size: 1.1em;
 }
+#dashboard-my-mirror .repo-star,
+#dashboard-my-org .repo-star,
 #dashboard-my-repo .repo-star {
   color: #888;
 }
+#dashboard-my-mirror .repo-contrib-header,
+#dashboard-my-org .repo-contrib-header,
 #dashboard-my-repo .repo-contrib-header {
   border-top: 1px solid #d6d6d6;
 }
@@ -839,6 +838,9 @@ The register and sign-in page style
   margin-left: -15px;
 }
 /* repository main */
+#repo-wrapper {
+  padding-bottom: 100px;
+}
 #repo-header {
   height: 69px;
   border-bottom: 1px solid #d6d6d6;
@@ -849,6 +851,7 @@ The register and sign-in page style
   color: #888888;
   font-size: 1.6em;
   font-weight: normal;
+  margin-bottom: 0;
 }
 #repo-header-name i {
   margin-right: 12px;
@@ -919,6 +922,12 @@ The register and sign-in page style
 }
 #repo-clone-zip {
   line-height: 48px;
+}
+#repo-clone-zip a {
+  cursor: pointer;
+  color: white;
+  overflow: visible;
+  padding: .6em 1.2em;
 }
 #repo-clone-zip .btn {
   margin: 0 6px;
@@ -1001,7 +1010,7 @@ The register and sign-in page style
   box-sizing: border-box;
 }
 #repo-files-table {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 #repo-files-table th,
 #repo-files-table td {
@@ -1072,6 +1081,9 @@ The register and sign-in page style
 }
 #repo-bare-start pre {
   margin: 0 40px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
 }
 .repo-bare #repo-bare-start h2 {
   margin-top: 30px;
@@ -1087,35 +1099,43 @@ The register and sign-in page style
   margin-right: 200px;
 }
 .repo-bare #repo-clone-help {
+  clear: both;
   width: 100%;
 }
 .repo-bare #repo-clone-url {
   width: 520px;
 }
 /* repository create */
+#repo-migrate-form,
 #repo-create-form {
   width: 800px;
-  margin: 60px auto 150px auto;
+  margin: 60px auto auto auto;
   background: white;
 }
+#repo-migrate-form h2,
 #repo-create-form h2 {
   margin: .5em 1em;
 }
+#repo-migrate-form .field,
 #repo-create-form .field {
   margin: 1.2em 0 2em 0;
 }
+#repo-migrate-form .ipt,
 #repo-create-form .ipt {
   width: 540px;
 }
+#repo-migrate-form textarea,
 #repo-create-form textarea {
   height: 120px;
 }
+#repo-migrate-form .avatar,
 #repo-create-form .avatar {
   vertical-align: middle;
   margin-right: .6em;
   width: 28px;
   height: 28px;
 }
+#repo-migrate-form:hover,
 #repo-create-form:hover {
   box-shadow: 0px 0px 6px #CCC;
 }
@@ -1136,6 +1156,61 @@ The register and sign-in page style
 }
 #repo-create-owner-list li.checked .octicon {
   opacity: 1;
+}
+.file-name {
+  margin-left: 1em;
+}
+.file-size {
+  font-size: 13px;
+  color: #888;
+  margin-left: 1em;
+}
+.code-view {
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: white;
+}
+.code-view .view-raw {
+  min-height: 40px;
+  text-align: center;
+  padding-top: 20px;
+}
+.code-view .view-raw .btn {
+  font-size: 1.05em;
+  line-height: 16px;
+  padding: 6px 8px;
+}
+.code-view table {
+  width: 100%;
+}
+.code-view table td {
+  padding: 0;
+}
+.code-view .lines-num {
+  text-align: right;
+  color: #999;
+  background: #f5f5f5;
+  width: 1%;
+}
+.code-view .lines-num span {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  line-height: 18px;
+  padding: 0 8px 0 10px;
+  cursor: pointer;
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+}
+.code-view .lines-code > pre {
+  border: none;
+  border-left: 1px solid #ddd;
+}
+.code-view .lines-code > pre > ol.linenums > li {
+  padding: 0 10px;
+}
+.code-view .lines-code > pre > ol.linenums > li.active {
+  background: #ffffdd;
 }
 #setting-wrapper {
   padding-bottom: 100px;
@@ -1223,4 +1298,102 @@ The register and sign-in page style
 }
 #user-ssh-add-form .field {
   margin-bottom: 24px;
+}
+.repo-issue-wrapper {
+  padding: 18px 0;
+}
+.pr-main {
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+.pr-sidebar {
+  border-left: 1px solid #DDD;
+  box-sizing: border-box;
+}
+#pr-sidebar-nav {
+  margin-top: 6px;
+}
+#pr-sidebar-nav li {
+  margin-bottom: 4px;
+}
+#pr-sidebar-nav li > a {
+  border: 1px solid transparent;
+  border-left: none;
+}
+#pr-sidebar-nav li > a:hover {
+  background-color: #FFF;
+  border-color: #DDD;
+}
+#pr-sidebar-nav .label {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-top: 1px;
+}
+#pr-sidebar-nav li.current a {
+  background-color: #FFF;
+  border-color: #DDD;
+}
+.pr-title .pr-num {
+  font-weight: normal;
+  color: #888;
+}
+.pr-meta {
+  color: #888;
+}
+.pr-meta .pr-author {
+  margin: 0 8px;
+  color: #444;
+}
+.pr-meta .pr-author:hover {
+  text-decoration: underline;
+}
+.pr-meta .pr-branch {
+  margin: 0 4px;
+  font-size: 12px;
+  padding: 4px 6px;
+}
+.pr-nav {
+  border-bottom: 1px solid #DDD;
+  margin-top: 16px;
+}
+.pr-nav .octicon {
+  margin-right: 4px;
+}
+.pr-nav li > a {
+  padding: 3px 9px !important;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-top-left-radius: .2em;
+  border-top-right-radius: .2em;
+}
+.pr-nav li > a .label {
+  padding: 1px 5px;
+  font-size: 12px;
+  margin-left: 4px;
+}
+.pr-nav li.current > a {
+  background-color: #FFF;
+  border-color: #E6E6E6;
+}
+.diff-bar .diff-add {
+  color: #65ad4e;
+}
+.diff-bar .diff-delete {
+  color: #d9453d;
+}
+.diff-bar .diff-status {
+  width: 50px;
+  background-color: #d9453d;
+  height: 10px;
+  margin-top: 7px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: .2em;
+}
+.diff-bar .diff-status-inner {
+  width: 45%;
+  background-color: #65ad4e;
+  height: 10px;
+  border-top-left-radius: .2em;
+  border-bottom-left-radius: .2em;
 }

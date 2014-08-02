@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pull Request</title>
+    <link rel="stylesheet" href="../css/ui.css"/>
+    <link rel="stylesheet" href="../font/octicons.css"/>
+    <link rel="stylesheet" href="../css/gogs.css"/>
+    <script src="../js/lib/jquery-2.1.1.min.js"></script>
+    <script src="../js/lib/tabs.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+    <ul class="menu menu-line container" id="header-nav">
+        <li class="head" id="header-nav-logo">
+            <img src="../img/favicon.png" alt="" class="avatar-30"/>
+        </li>
+        <li class="current"><a href="#">Dashboard</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Help</a></li>
+        <!-- user header nav -->
+        <li class="right" id="header-nav-sign-out">
+            <a href="#" title="Sign Out"><i class="octicon octicon-sign-out"></i></a>
+        </li>
+        <li class="right">
+            <a href="#" title="Account Settings"><i class="octicon octicon-settings"></i></a>
+        </li>
+        <li class="right">
+            <a href="#" title="Administration"><i class="octicon octicon-stop"></i></a>
+        </li>
+        <li class="right down">
+            <a href="#" title="New Repository or Organizations"><i class="octicon octicon-plus"></i></a>
+            <ul class="menu menu-down" id="header-new-repo-menu">
+                <li><a href="#"><i class="octicon octicon-repo-create"></i>New Repository</a></li>
+                <li><a href="#"><i class="octicon octicon-organization"></i>New Organization</a></li>
+                <li><a href="#"><i class="octicon octicon-repo-clone"></i>New Migration</a></li>
+            </ul>
+        </li>
+        <li class="right" id="header-nav-user">
+            <a href="#" class="text-bold">
+                <img src="//1.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=30" alt="user-avatar"
+                     class="avatar-30"/>
+                fuxiaohei
+            </a>
+        </li>
+    </ul>
+</header>
+<div id="repo-wrapper">
+<div id="repo-header" class="clear">
+    <div class="container clear">
+        <h1 id="repo-header-name" class="left public">
+            <i class="mega-octicon octicon-repo"></i>
+            <a class="author" href="#">gogits</a>
+            <span class="divider">/</span>
+            <a class="repo text-bold" href="#">gogs</a>
+        </h1>
+        <ul id="repo-header-meta" class="right menu menu-line">
+            <li id="repo-header-download" class="inline-block down drop">
+                <a id="repo-header-download-btn" href="#">
+                    <button class="btn btn-black text-bold btn-radius">
+                        <i class="octicon octicon-cloud-download"></i>
+                    </button>
+                </a>
+
+                <div id="repo-header-download-drop" class="drop-down">
+                    <div id="repo-clone" class="clear">
+                        <button id="repo-clone-ssh" class="btn btn-blue current left btn-left-radius">SSH</button>
+                        <button id="repo-clone-https" class="btn btn-gray left">HTTPS</button>
+                        <input id="repo-clone-url" type="text" class="ipt ipt-disabled left"/>
+                        <button id="repo-clone-copy" class="btn btn-black left btn-right-radius">Copy</button>
+                        <p class="text-center" id="repo-clone-help">Need help cloning? Visit <a href="#">Help</a>!</p>
+                        <hr/>
+                        <div class="text-center" id="repo-clone-zip">
+                            <button class="btn btn-green btn-radius"><i class="octicon octicon-file-zip"></i>ZIP
+                            </button>
+                            <button class="btn btn-green btn-radius"><i class="octicon octicon-file-zip"></i>TAR.GZ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li id="repo-header-watch">
+                <a id="repo-header-watch-btn" href="#">
+                    <button class="btn btn-gray text-bold btn-radius">
+                        <i class="octicon octicon-eye-watch"></i>Watch
+                        <span class="num">645</span>
+                    </button>
+                </a>
+            </li>
+            <li id="repo-header-star">
+                <a id="repo-header-star-btn" href="#">
+                    <button class="btn btn-gray text-bold btn-radius">
+                        <i class="octicon octicon-star"></i>Star
+                        <span class="num">1827</span>
+                    </button>
+                </a>
+            </li>
+            <li id="repo-header-fork">
+                <a id="repo-header-fork-btn" href="#">
+                    <button class="btn btn-gray text-bold btn-radius">
+                        <i class="octicon octicon-repo-forked"></i>Fork
+                        <span class="num">47</span>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="clear container repo-issue-wrapper repo-pr">
+    <div class="pr-main grid-11-12 left">
+        <div class="pr-title clear">
+            <h2 class="pr-title grid-5-6 left">Fix: Repo Name can not be converted to lower in some cases <span class="pr-num">#256</span></h2>
+            <div class="pr-title-btn grid-1-6 right text-right">
+                <button class="btn btn-gray btn-radius text-bold">Edit</button>&nbsp;&nbsp;
+                <a href="#"><button class="btn btn-green btn-radius text-bold">New Issue</button></a>
+            </div>
+        </div>
+        <div class="pr-meta">
+            <button class="btn btn-small btn-green btn-radius">
+                <i class="octicon octicon-git-pull-request"></i> Open
+            </button>
+            <span class="msg">
+                <a href="#" class="text-bold pr-author">eryx</a>wants to merge 2 commits into <span class="pr-branch label label-gray radius">gogits:master</span> from <span class="pr-branch label label-gray radius">unknown repository</span>
+            </span>
+        </div>
+        <div class="pr-nav clear">
+            <ul class="menu menu-line left">
+                <li class="current"><a href="#"><i class="octicon octicon-comment"></i>comments
+                    <span class="label label-gray label-radius">5</span>
+                </a></li>
+                <li><a href="#"><i class="octicon octicon-git-commit"></i>commits
+                    <span class="label label-gray label-radius">2</span>
+                </a></li>
+                <li><a href="#"><i class="octicon octicon-file-code"></i>files
+                    <span class="label label-gray label-radius">3</span>
+                </a></li>
+            </ul>
+            <div class="diff-bar right">
+                <span class="diff-add">+12</span>
+                <span class="inline-block diff-status">
+                    <span class="block diff-status-inner"></span>
+                </span>
+                <span class="diff-delete">-7</span>
+            </div>
+        </div>
+    </div>
+    <div class="pr-sidebar grid-1-12 right">
+        <ul class="menu menu-vertical" id="pr-sidebar-nav">
+            <li><a href="#" class="btn-right-radius"><i class="octicon octicon-issue-opened"></i>
+                <span class="num right label label-blue label-radius">12</span>
+            </a></li>
+            <li class="current"><a href="#" class="btn-right-radius"><i class="octicon octicon-git-pull-request"></i>
+                <span class="num right label label-black label-radius">12</span>
+            </a></li>
+            <li class="border-bottom"></li>
+            <li><a href="#" class="btn-right-radius"><i class="octicon octicon-tools"></i></a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p class="left" id="footer-rights">© 2014 GoGits · Version: 0.4.4.0619 Alpha · Page: <strong>3ms</strong> ·
+            Template: <strong>0ms</strong></p>
+
+        <p class="right" id="footer-links">
+            <a href="#"><i class="octicon octicon-mark-github"></i></a>
+            <a href="#">Official</a>
+            <span class="version">Go1.3</span>
+        </p>
+    </div>
+</footer>
+<script>
+    $(function () {
+        Tabs('#repo-branch-tab-nav');
+    });
+</script>
+</body>
+</html>

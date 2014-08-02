@@ -1,0 +1,115 @@
+@import "../ui/var";
+
+.repo-issue-wrapper {
+  padding: 18px 0;
+}
+
+.pr-main {
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.pr-sidebar {
+  border-left: 1px solid #DDD;
+  box-sizing: border-box;
+}
+
+#pr-sidebar-nav {
+  margin-top: 6px;
+  li {
+    margin-bottom: 4px;
+  }
+  li > a {
+    border: 1px solid transparent;
+    border-left: none;
+    &:hover {
+      background-color: #FFF;
+      border-color: #DDD;
+    }
+  }
+  .label {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-top: 1px;
+  }
+  li.current {
+    a {
+      background-color: #FFF;
+      border-color: #DDD;
+    }
+  }
+}
+
+.pr-title {
+  .pr-num {
+    font-weight: normal;
+    color: #888;
+  }
+}
+
+.pr-meta {
+  color: #888;
+  .pr-author {
+    margin: 0 8px;
+    color: #444;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .pr-branch {
+    margin: 0 4px;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+
+.pr-nav {
+  border-bottom: 1px solid #DDD;
+  margin-top: 16px;
+  .octicon {
+    margin-right: 4px;
+  }
+  li > a {
+    padding: 3px 9px !important;
+    border: 1px solid transparent;
+    border-bottom: none;
+    .label {
+      padding: 1px 5px;
+      font-size: 12px;
+      margin-left: 4px;
+    }
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+  }
+  li.current {
+    > a {
+      background-color: #FFF;
+      border-color: #E6E6E6;
+    }
+  }
+}
+
+.diff-bar {
+  .diff-add {
+    color: @btnGreenColor;
+  }
+  .diff-delete {
+    color: @btnRedColor;
+  }
+  .diff-status {
+    width: 50px;
+    background-color: @btnRedColor;
+    height: 10px;
+    margin-top: 7px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: .2em;
+  }
+  .diff-status-inner {
+    width: 45%;
+    background-color: @btnGreenColor;
+    height: 10px;
+    border-top-left-radius: .2em;
+    border-bottom-left-radius: .2em;
+  }
+}
