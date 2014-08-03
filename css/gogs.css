@@ -1222,6 +1222,9 @@ The register and sign-in page style
 .code-view .lines-code > pre > ol.linenums > li.active {
   background: #ffffdd;
 }
+.repo-setting-zone {
+  padding: 30px;
+}
 #setting-wrapper {
   padding-bottom: 100px;
 }
@@ -1248,17 +1251,27 @@ The register and sign-in page style
 .setting-content {
   margin-left: 32px;
 }
+#repo-setting-form,
 #user-profile-form {
   background-color: #FFF;
   padding: 30px 0;
 }
+#repo-setting-form textarea,
+#user-profile-form textarea {
+  margin-left: 4px;
+  height: 100px;
+}
+#repo-setting-form label,
 #user-profile-form label,
+#repo-setting-form .form-label,
 #user-profile-form .form-label {
   width: 240px;
 }
+#repo-setting-form .ipt,
 #user-profile-form .ipt {
   width: 360px;
 }
+#repo-setting-form .field,
 #user-profile-form .field {
   margin-bottom: 24px;
 }
@@ -1409,7 +1422,8 @@ The register and sign-in page style
   border-bottom-left-radius: .2em;
 }
 #pr-commit,
-#pr-file-diff {
+#pr-file-diff,
+#issue-add-comment-preview {
   display: none;
 }
 #pr-conversation-list {
@@ -1419,7 +1433,8 @@ The register and sign-in page style
 .issue-comment,
 .issue-commit,
 .issue-line,
-.issue-merge {
+.issue-merge,
+.issue-add-comment {
   margin-bottom: 16px;
 }
 .issue-comment .author-avatar img {
@@ -1496,4 +1511,32 @@ The register and sign-in page style
 .issue-line {
   height: 4px;
   background-color: #E6E6E6;
+}
+.issue-add-comment .panel {
+  margin-left: 60px;
+  margin-top: -40px;
+}
+.issue-add-comment .panel-header {
+  font-size: 13px;
+  padding-bottom: 0;
+}
+.issue-add-comment .add-nav > li > a {
+  padding: 4px 12px;
+  color: #444;
+  border: 1px solid #CCC;
+  margin-bottom: -1px;
+  font-size: 14px;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+}
+.issue-add-comment .add-nav > li > a:hover {
+  background-color: #FFF;
+}
+.issue-add-comment .add-nav > li.js-tab-nav-show > a {
+  background-color: #FFF;
+}
+textarea#issue-add-content {
+  width: 100%;
+  box-sizing: border-box;
+  height: 120px;
 }

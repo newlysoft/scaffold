@@ -24,7 +24,8 @@ function Tabs(selector) {
             $($current.data("tab-target")).addClass("js-tab-show");
         }
         // bind nav click
-        $e.on("click", ".js-tab-nav", function () {
+        $e.on("click", ".js-tab-nav", function (e) {
+            e.preventDefault();
             var $this = $(this);
             // is showing, not change.
             if ($this.hasClass("js-tab-nav-show")) {

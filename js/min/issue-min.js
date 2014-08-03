@@ -1,1 +1,0 @@
-$(function(){Tabs("#pr-nav")});

@@ -1,1 +1,0 @@
-$(function(){$("#ssh-add").on("click",function(s){var d=$("#user-ssh-add-form");d.hasClass("hide")?d.removeClass("hide"):d.addClass("hide")})});
