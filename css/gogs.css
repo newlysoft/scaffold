@@ -30,6 +30,16 @@ img.avatar-30 {
   height: 30px;
   vertical-align: middle;
 }
+img.avatar-40 {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+img.avatar-48 {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
 #wrapper {
   padding: 0;
   margin: 0 0 -55px 0;
@@ -1355,6 +1365,7 @@ The register and sign-in page style
 .pr-nav {
   border-bottom: 1px solid #DDD;
   margin-top: 16px;
+  margin-bottom: 16px;
 }
 .pr-nav .octicon {
   margin-right: 4px;
@@ -1371,7 +1382,7 @@ The register and sign-in page style
   font-size: 12px;
   margin-left: 4px;
 }
-.pr-nav li.current > a {
+.pr-nav li.js-tab-nav-show > a {
   background-color: #FFF;
   border-color: #E6E6E6;
 }
@@ -1396,4 +1407,93 @@ The register and sign-in page style
   height: 10px;
   border-top-left-radius: .2em;
   border-bottom-left-radius: .2em;
+}
+#pr-commit,
+#pr-file-diff {
+  display: none;
+}
+#pr-conversation-list {
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+.issue-comment,
+.issue-commit,
+.issue-line,
+.issue-merge {
+  margin-bottom: 16px;
+}
+.issue-comment .author-avatar img {
+  margin-right: 12px;
+}
+.issue-comment .panel {
+  margin-left: 60px;
+  margin-top: -40px;
+}
+.issue-comment .panel-header {
+  font-size: 13px;
+}
+.issue-comment .author-name {
+  font-weight: bold;
+}
+.issue-comment .date {
+  margin-left: 4px;
+  font-style: italic;
+  color: #888;
+}
+.issue-comment .action > * {
+  margin-left: 4px;
+  font-size: 12px;
+}
+.issue-comment .action i {
+  font-size: 13px;
+}
+.issue-commit {
+  line-height: 32px;
+}
+.issue-commit i,
+.issue-commit .author-avatar img {
+  margin-right: 16px;
+}
+.issue-commit .sha {
+  margin-left: 24px;
+}
+.issue-commit .message {
+  display: block;
+  margin-left: 88px;
+  padding-top: 4px;
+  line-height: 24px;
+}
+.issue-merge .ico {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #FFF;
+  margin-right: 12px;
+}
+.issue-merge .ico i {
+  margin-top: 8px;
+  font-size: 24px;
+}
+.issue-merge .panel {
+  margin-left: 60px;
+  margin-top: -40px;
+}
+.issue-merge .panel-header {
+  font-size: 13px;
+}
+.issue-merge-ok .ico {
+  background-color: #65AD4E;
+}
+.issue-merge-ok .panel,
+.issue-merge-ok .panel-content,
+.issue-merge-ok .panel-header {
+  border-color: #65AD4E;
+  background-color: #FFF;
+}
+.issue-merge-ok .panel-header {
+  color: #508a3e;
+}
+.issue-line {
+  height: 4px;
+  background-color: #E6E6E6;
 }
