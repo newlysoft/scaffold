@@ -11,6 +11,7 @@
 html,
 body {
     height: 100%;
+    overflow-y: scroll;
 }
 .octicon,
 .fa {
@@ -254,11 +255,11 @@ clear: both;
 .table {
     width: 100%;
     max-width: 100%;
-    > thead > tr > th, 
-    > tbody > tr > th, 
-    > tfoot > tr > th, 
-    > thead > tr > td, 
-    > tbody > tr > td, 
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th,
+    > thead > tr > td,
+    > tbody > tr > td,
     > tfoot > tr > td {
         border-top: 1px solid #e7eaec;
         line-height: 1.42857;
@@ -268,7 +269,7 @@ clear: both;
     th {
         text-align: left;
     }
-} 
+}
 .table-striped {
     >tbody>tr:nth-child(odd)>td,
     >tbody>tr:nth-child(odd)>th {
